@@ -8,13 +8,22 @@ import NavigationMenu from './NavigationMenu.vue';
 <template>
   <header class="header">
     <div class="navbar bg-base-100 shadow-sm">
-      <div class="flex-1">
-        <router-link to="/">SCADA Solutions</router-link>
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+          </div>
+          <navigation-menu classes="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52" />
+        </div>
+        <router-link :to="{ name: 'home' }">SCADA Solutions</router-link>
       </div>
-      <div class="flex-none">
-        <nav>
-          <NavigationMenu />
-        </nav>
+
+      <div class="navbar-center hidden lg:flex">
+        <navigation-menu />
+      </div>
+
+      <div class="navbar-end">
+        <router-link class="btn btn-outline" :to="{ name: 'contact', hash: '#contact'}">Contact Us</router-link>
       </div>
     </div>
   </header>
