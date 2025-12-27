@@ -27,7 +27,7 @@ function getImageUrl(image) {
       </div>
 
       <div class="navbar-end">
-        <router-link class="btn btn-outline" :to="{ name: 'contact', hash: '#contact'}">Contact Us</router-link>
+        <router-link class="btn btn-primary" :to="{ name: 'home', hash: '#ContactUs'}">Contact Us</router-link>
       </div>
     </div>
   </header>
