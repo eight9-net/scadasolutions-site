@@ -15,12 +15,17 @@ const props = defineProps({
   links : {
     type: Array,
     required: true
-  }
+  },
+  hover: {
+    type: Boolean,
+    default: true
+  },
 });
 
 const isHovered = shallowRef(false);
 
 function onHover(state) {
+  if (!props.hover) return;
   isHovered.value = state;
 }
 
@@ -33,7 +38,7 @@ function onHover(state) {
         <router-link :to="link" v-if="link">{{ title }}</router-link>
         <span v-else>{{ title }}</span>
       </summary>
-      <ul class="bg-base-100 rounded-t-none p-2 w-52 subnav">
+      <ul class="bg-base-100 rounded-t-none border border-gray-300 p-2 w-52 subnav">
         <li v-for="(item, index) in links" :key="index">
           <router-link :to="{ name: item.name, hash: item.hash }">{{ item.title }}</router-link>
         </li>

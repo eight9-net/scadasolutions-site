@@ -11,7 +11,7 @@ import WindFacts from '../views/WindFacts.vue';
 import Glossary from '../views/Glossary.vue';
 import News from '../views/News.vue';
 import Careers from '../views/Careers.vue';
-import Contact from '../views/Contact.vue';
+import Contact from '../components/Contact.vue';
 
 const routes = [
   {
@@ -84,7 +84,21 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition; // Go back to saved position on back/forward navigation
+    } else if (to.hash) {
+      // If there's a hash, scroll to the element with that selector
+      return {
+        el: to.hash,
+        // Optional: add smooth behavior if the browser supports it
+        behavior: 'smooth',
+      };
+    } else {
+      return { top: 0 }; // Otherwise, scroll to the top of the page
+    }
+  },
 });
 
 export default router;

@@ -1,12 +1,9 @@
+
+<script setup>
+
+</script>
+
 <template>
   <router-view />
 </template>
-
-<script setup>
-// App component now uses router-view
-</script>
-
-<style>
-
-</style>
 

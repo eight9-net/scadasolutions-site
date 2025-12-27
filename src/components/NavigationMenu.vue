@@ -3,25 +3,21 @@
 const props = defineProps({
   classes: {
     type: String,
-    default: 'menu menu-horizontal px-1 dropdown-hover'
-  }
+    default: 'menu menu-horizontal px-1'
+  },
+  hover: {
+    type: Boolean,
+    default: true
+  },
 });
-
-import { vElementHover } from '@vueuse/components';
-import { ref, shallowRef } from 'vue';
+import { shallowRef } from 'vue';
 import DropdownMenu from './DropdownMenu.vue';
 
-const isHovered = ref(false);
-
-function onHover(state, foo) {
-  isHovered.value = state;
-  console.log('hover state:', state, foo);
-}
 
 const links = shallowRef({
   home: [
-    { name: 'home', hash: '#faqs', title: 'FAQs' },
-    { name: 'home', hash: '#contact', title: 'Contact Us' },
+    { name: 'home', hash: '#FAQs', title: 'FAQs' },
+    { name: 'home', hash: '#ContactUs', title: 'Contact Us' },
   ],
   products: [
     { name: 'scada', title: 'SCADA' },
@@ -61,13 +57,13 @@ const links = shallowRef({
 
 <template>
   <ul :class="props.classes">
-    <DropdownMenu title="Home" :link="{name: 'home'}" :links="links.home" />
-    <DropdownMenu title="Products" :links="links.products" />
-    <DropdownMenu title="Company" :link="company" :links="links.company" />
-    <DropdownMenu title="Services" :links="links.services" />
-    <DropdownMenu title="Wind Power" :links="links.windpower" />
-    <DropdownMenu title="News" :links="links.news" />
-    <DropdownMenu title="Careers" :links="links.careers" />
+    <DropdownMenu title="Home" :links="links.home" :hover="props.hover" />
+    <DropdownMenu title="Products" :links="links.products" :hover="props.hover" />
+    <DropdownMenu title="Company" :links="links.company" :hover="props.hover" />
+    <DropdownMenu title="Services" :links="links.services" :hover="props.hover" />
+    <DropdownMenu title="Wind Power" :links="links.windpower" :hover="props.hover" />
+    <DropdownMenu title="News" :links="links.news" :hover="props.hover" />
+    <DropdownMenu title="Careers" :links="links.careers" :hover="props.hover" />
   </ul>
 </template>
 

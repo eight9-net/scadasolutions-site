@@ -1,2 +1,10 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: cupcake --default;
+  root: ":root";
+  logs: true;
+}
+
+html {
+  scroll-behavior: smooth;
+}
