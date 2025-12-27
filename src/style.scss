@@ -1,0 +1,17 @@
+@use "tailwindcss";
+@plugin "daisyui" {
+  themes: cupcake --default;
+  root: ":root";
+  logs: true;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fixed-bg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
