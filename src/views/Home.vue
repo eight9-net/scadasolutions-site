@@ -26,12 +26,12 @@
       >
         <div class="hero-overlay"></div>
         <div class="hero-content text-neutral-content text-center">
-          <div class="max-w-md">
-            <h1 class="mb-5 text-5xl font-bold">Streamlined Integration Solutions for Industrial Automation</h1>
-            <p class="mb-5">
+          <div class="w-full mx-auto max-w-4xl">
+            <h1 class="headline uppercase mb-5 text-5xl font-normal">Streamlined Integration Solutions for Industrial Automation</h1>
+            <div class="headline mb-5 text-2xl my-6 font-light">
               Control Systems Integration Services | Irvine
-            </p>
-            <router-link :to="{ name: 'home', hash: '#ContactUs' }" class="btn btn-primary">Contact Us</router-link>
+            </div>
+            <router-link :to="{ name: 'home', hash: '#ContactUs' }" class="btn btn-soft btn-primary btn-lg my-4">Contact Us</router-link>
           </div>
         </div>
       </div>
@@ -78,9 +78,23 @@
       >
         <div class="h-full w-full backdrop-brightness-50 text-white m-0">
           <div class="w-auto">
-            <div class="container mx-auto px-40 faq-container py-25 ">
+            <div class="container mx-auto px-40 faq-container py-25 text-center">
               <h2 class="text-3xl font-bold mb-10 text-white text-center">Contact Us</h2>
-              <p class="my-4 mx-40 text-center">
+              <div class="my-4 mx-40">
+                <p>Call Us</p>
+                <p>
+                  <FontAwesomeIcon :icon="['fa', 'phone']" />
+                  <a href="tel:+19495989605" class="ms-1">949-598-9605</a>
+                </p>
+              </div>
+              <div class="my-4 mx-40">
+                <p>Email Us</p>
+                <p>
+                  <FontAwesomeIcon :icon="['fa', 'envelope']" />
+                  <a href="mailto:info@scadasolutions.com" class="ms-1">info@scadasolutions.com</a>
+                </p>
+              </div>
+              <p class="my-4 mx-40">
                 Enter your information below along with a brief message and your contact details. A member of our team will be in touch with you as soon as possible to schedule a consultation.
               </p>
               <HomeContactForm />

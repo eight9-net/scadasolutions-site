@@ -34,7 +34,6 @@
             pattern="[A-Za-z]*"
             minlength="1"
             maxlength="50"
-            title="Must be alphabetic characters only"
             v-model="form.first_name"
           />
         </label>
@@ -51,7 +50,6 @@
             pattern="[A-Za-z]*"
             minlength="1"
             maxlength="50"
-            title="Must be alphabetic characters only"
             v-model="form.last_name"
           />
         </label>
@@ -68,14 +66,12 @@
             class="tabular-nums"
             required
             placeholder="Phone"
-            pattern="[0-9]*"
             minlength="10"
-            maxlength="10"
-            title="Must be 10 digits"
+            maxlength="15"
             v-model="form.phone"
           />
         </label>
-        <p class="validator-hint hidden">Must be 10 digits</p>
+        <p class="validator-hint hidden">Must be at least 10 digits</p>
       </fieldset>
 
       <fieldset class="fieldset flex-3">

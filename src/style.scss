@@ -1,4 +1,5 @@
 @use "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap');
 @plugin "daisyui" {
   themes: corporate --default;
   root: ":root";
@@ -14,4 +15,9 @@ html {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.headline {
+  font-family: 'Noto Serif Georgian', serif;
+  line-height: 1.5em;
 }

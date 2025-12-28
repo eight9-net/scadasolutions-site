@@ -34,7 +34,7 @@
     {
       title: 'How do I contact you?',
       content: `
-        <p class="mb-4">You can call us at <a href="tel:+16264703579">626-470-3579</a> or email us at <a href="mailto:sales@scadasolutions.com">sales@scadasolutions.com</a>. You can also use the form on our <a href="/#Contact">Contact Us</a> page.</p>
+        <p class="mb-4">You can call us at <a href="tel:+16264703579">626-470-3579</a> or email us at <a href="mailto:sales@scadasolutions.com">sales@scadasolutions.com</a>. You can also use the form on our <a href="/#ContactUs">Contact Us</a> page.</p>
       `,
     },
   ]);

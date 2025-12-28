@@ -1,5 +1,6 @@
 
 <script setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import NavigationMenu from './NavigationMenu.vue';
 
 function getImageUrl(image) {
@@ -8,17 +9,17 @@ function getImageUrl(image) {
 </script>
 
 <template>
-  <header class="header">
+  <header class="header sticky top-0 z-50">
     <div class="navbar bg-base-100 shadow-sm">
       <div class="navbar-start">
         <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+          <div tabindex="0" role="button" class="btn btn-lg btn-ghost lg:hidden">
+            <font-awesome-icon :icon="['fa', 'bars']" size="lg" />
           </div>
-          <navigation-menu classes="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-100" :hover="false" />
+          <navigation-menu classes="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-100" :hover="false" :border="false" />
         </div>
         <router-link :to="{ name: 'home' }">
-          <img :src="getImageUrl('../assets/images/scada-solutions-logo.png')" alt="SCADA Solutions" />
+          <img class="min-w-[275px] sm:min-w-[350px]" :src="getImageUrl('../assets/images/scada-solutions-logo.png')" alt="SCADA Solutions" />
         </router-link>
       </div>
 

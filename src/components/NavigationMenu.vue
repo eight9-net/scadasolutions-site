@@ -9,6 +9,10 @@ const props = defineProps({
     type: Boolean,
     default: true
   },
+  border: {
+    type: Boolean,
+    default: true
+  },
 });
 import { shallowRef } from 'vue';
 import DropdownMenu from './DropdownMenu.vue';
@@ -57,13 +61,13 @@ const links = shallowRef({
 
 <template>
   <ul :class="props.classes">
-    <DropdownMenu title="Home" :links="links.home" :hover="props.hover" />
-    <DropdownMenu title="Products" :links="links.products" :hover="props.hover" />
-    <DropdownMenu title="Company" :links="links.company" :hover="props.hover" />
-    <DropdownMenu title="Services" :links="links.services" :hover="props.hover" />
-    <DropdownMenu title="Wind Power" :links="links.windpower" :hover="props.hover" />
-    <DropdownMenu title="News" :links="links.news" :hover="props.hover" />
-    <DropdownMenu title="Careers" :links="links.careers" :hover="props.hover" />
+    <DropdownMenu title="Home" :links="links.home" :hover="props.hover" :border="props.border" />
+    <DropdownMenu title="Products" :links="links.products" :hover="props.hover" :border="props.border" />
+    <DropdownMenu title="Company" :links="links.company" :hover="props.hover" :border="props.border" />
+    <DropdownMenu title="Services" :links="links.services" :hover="props.hover" :border="props.border" />
+    <DropdownMenu title="Wind Power" :links="links.windpower" :hover="props.hover" :border="props.border" />
+    <DropdownMenu title="News" :links="links.news" :hover="props.hover" :border="props.border" />
+    <DropdownMenu title="Careers" :links="links.careers" :hover="props.hover" :border="props.border" />
   </ul>
 </template>
 

@@ -1,6 +1,6 @@
 <script setup>
 
-import { shallowRef } from 'vue';
+import { ref, shallowRef } from 'vue';
 import { vElementHover } from '@vueuse/components';
 
 const props = defineProps({
@@ -20,9 +20,14 @@ const props = defineProps({
     type: Boolean,
     default: true
   },
+  border: {
+    type: Boolean,
+    default: true
+  },
 });
 
 const isHovered = shallowRef(false);
+const borderClass = ref(props.border ? 'border border-gray-300' : '');
 
 function onHover(state) {
   if (!props.hover) return;
@@ -38,7 +43,7 @@ function onHover(state) {
         <router-link :to="link" v-if="link">{{ title }}</router-link>
         <span v-else>{{ title }}</span>
       </summary>
-      <ul class="bg-base-100 rounded-t-none border border-gray-300 p-2 w-52 subnav">
+      <ul :class="`bg-base-100 rounded-t-none ${borderClass} p-2 w-52 subnav`">
         <li v-for="(item, index) in links" :key="index">
           <router-link :to="{ name: item.name, hash: item.hash }">{{ item.title }}</router-link>
         </li>
