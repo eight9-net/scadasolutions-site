@@ -25,7 +25,7 @@
 
     <div class="flex gap-4">
       <fieldset class="fieldset flex-3">
-        <label class="input validator">
+        <label class="input validator w-full">
           <input
             type="text"
             required
@@ -41,7 +41,7 @@
       </fieldset>
 
       <fieldset class="fieldset flex-3">
-        <label class="input validator">
+        <label class="input validator w-full">
           <input
             type="text"
             required
@@ -59,7 +59,7 @@
 
     <div class="flex gap-4">
       <fieldset class="fieldset flex-3">
-        <label class="input validator">
+        <label class="input validator w-full">
           <FontAwesomeIcon :icon="['fas', 'phone']" class="icon" />
           <input
             type="tel"
@@ -75,9 +75,9 @@
       </fieldset>
 
       <fieldset class="fieldset flex-3">
-        <label class="input validator join-item">
+        <label class="input validator w-full">
           <FontAwesomeIcon :icon="['fas', 'envelope']" class="icon" />
-          <input type="email" placeholder="mail@site.com" required v-model="form.email" />
+          <input type="email" placeholder="Email" required v-model="form.email" />
         </label>
         <div class="validator-hint hidden">Enter valid email address</div>
       </fieldset>

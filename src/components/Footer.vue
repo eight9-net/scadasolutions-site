@@ -9,15 +9,15 @@
 
 <template>
   <footer class="footer-section">
-    <div class="container">
+    <div class="container mx-auto">
       <div class="w-full flex text-center">
 
         <div class="flex-1 footer-column">
-          <img :src="getImageUrl('../assets/images/scada-solutions-logo.png')" />
-          <p class="copyright my-5 text-xs">&copy; {{ currentYear}} All Rights Reserved | SCADA Solutions, Inc.</p>
+          <img class="max-w-[350px] mx-auto" :src="getImageUrl('../assets/images/scada-solutions-logo.png')" />
+          <p class="copyright my-10 text-xs">&copy; {{ currentYear}} All Rights Reserved | SCADA Solutions, Inc.</p>
         </div>
         <div class="flex-1 footer-column">
-          <h2 class="mb-5 text-3xl font-bold">Contact Information</h2>
+          <h2 class="headline m-5 text-3xl font-normal">Contact Information</h2>
           <ul>
             <li class="my-5">
               <FontAwesomeIcon :icon="['fa', 'phone']" />
@@ -31,7 +31,7 @@
           <h3 class="my-5 font-bold">Registered California DIR Public Works Contractor #949-509-9605</h3>
         </div>
         <div class="flex-1 footer-column">
-          <h2 class="mb-5 text-3xl font-bold">Map</h2>
+          <h2 class="my-10">Map...</h2>
         </div>
 
       </div>
