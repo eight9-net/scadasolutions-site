@@ -80,6 +80,9 @@
           <div class="w-auto">
             <div class="container mx-auto px-40 faq-container py-25 ">
               <h2 class="text-3xl font-bold mb-10 text-white text-center">Contact Us</h2>
+              <p class="my-4 mx-40 text-center">
+                Enter your information below along with a brief message and your contact details. A member of our team will be in touch with you as soon as possible to schedule a consultation.
+              </p>
               <HomeContactForm />
             </div>
 

@@ -1,6 +1,6 @@
 @use "tailwindcss";
 @plugin "daisyui" {
-  themes: cupcake --default;
+  themes: corporate --default;
   root: ":root";
   logs: true;
 }

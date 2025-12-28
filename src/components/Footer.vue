@@ -20,12 +20,12 @@
           <h2 class="mb-5 text-3xl font-bold">Contact Information</h2>
           <ul>
             <li class="my-5">
-              <FontAwesomeIcon icon="phone" />
-              <a href="tel:+19495989605">949-598-9605</a>
+              <FontAwesomeIcon :icon="['fa', 'phone']" />
+              <a href="tel:+19495989605" class="ms-1">949-598-9605</a>
             </li>
             <li class="my-5">
-              <FontAwesomeIcon icon="envelope" />
-              <a href="mailto:info@scadasolutions.com">info@scadasolutions.com</a>
+              <FontAwesomeIcon :icon="['fa', 'envelope']" />
+              <a href="mailto:info@scadasolutions.com" class="ms-1">info@scadasolutions.com</a>
             </li>
           </ul>
           <h3 class="my-5 font-bold">Registered California DIR Public Works Contractor #949-509-9605</h3>
