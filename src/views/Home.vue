@@ -1,5 +1,8 @@
 <script setup>
   import { computed, ref } from 'vue';
+  import HomeExplanation from '../components/HomeExplanation.vue';
+  import HomeProductOverview from '../components/HomeProductOverview.vue';
+  import HomeDesignEngineering from '../components/HomeDesignEngineering.vue';
   import HomeFaq from '../components/HomeFaq.vue';
   import HomeContactForm from '../components/HomeContactForm.vue';
 
@@ -37,23 +40,48 @@
       </div>
     </section>
 
-    <section class="features my-10 pt-10 scroll-target" v-if="false">
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>SCADA Systems</h3>
-          <p>Comprehensive SCADA solutions for monitoring and control</p>
-        </div>
-        <div class="feature-card">
-          <h3>Communications</h3>
-          <p>Reliable communication infrastructure for industrial systems</p>
-        </div>
-        <div class="feature-card">
-          <h3>Wind Energy</h3>
-          <p>Specialized solutions for wind energy applications</p>
+    <section class="explanation-section my-10 pt-10 scroll-target" id="Explanation">
+      <div
+        class="explanation-container bg-blue-200"
+      >
+        <div class="h-full w-full m-0">
+          <div class="w-auto">
+            <div class="container mx-auto px-40 py-25">
+              <HomeExplanation />
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <section class="product-overview-section my-10 pt-10 scroll-target" id="ProductOverview">
+      <div
+        class="product-overview-container"
+      >
+        <div class="h-full w-full m-0">
+          <div class="w-auto">
+            <div class="container mx-auto">
+              <HomeProductOverview />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="design-engineering-section my-10 pt-10 scroll-target" id="DesignAndEngineering">
+      <div
+        class="design-engineering-container"
+      >
+        <div class="h-full w-full m-0">
+          <div class="w-auto">
+            <div class="container mx-auto">
+              <HomeDesignEngineering />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="faq-section my-10 pt-10 scroll-target" id="FAQs">
       <div
