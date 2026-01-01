@@ -21,3 +21,9 @@ html {
   font-family: 'Noto Serif Georgian', serif;
   line-height: 1.5em;
 }
+
+.scroll-target {
+  position: absolute;
+  margin-top: -132px;
+  z-index: -1;
+}

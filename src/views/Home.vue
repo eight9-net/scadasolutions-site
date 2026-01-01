@@ -3,6 +3,11 @@
   import HomeExplanation from '../components/HomeExplanation.vue';
   import HomeProductOverview from '../components/HomeProductOverview.vue';
   import HomeDesignEngineering from '../components/HomeDesignEngineering.vue';
+  import HomeServiceAndSupport from '../components/HomeServiceAndSupport.vue';
+  import HomeIntegration from '../components/HomeIntegration.vue';
+  import HomeInstallation from '../components/HomeInstallation.vue';
+  import HomeSolar from '../components/HomeSolar.vue';
+  import HomeWind from '../components/HomeWind.vue';
   import HomeFaq from '../components/HomeFaq.vue';
   import HomeContactForm from '../components/HomeContactForm.vue';
 
@@ -40,7 +45,8 @@
       </div>
     </section>
 
-    <section class="explanation-section my-10 pt-10 scroll-target" id="Explanation">
+    <section class="explanation-section my-10 pt-10">
+      <div class="scroll-target" id="Explanation">&nbsp;</div>
       <div
         class="explanation-container bg-blue-200"
       >
@@ -54,7 +60,8 @@
       </div>
     </section>
 
-    <section class="product-overview-section my-10 pt-10 scroll-target" id="ProductOverview">
+    <section class="product-overview-section my-10 pt-10">
+      <div class="scroll-target" id="ProductOverview">&nbsp;</div>
       <div
         class="product-overview-container"
       >
@@ -69,7 +76,8 @@
     </section>
 
 
-    <section class="design-engineering-section my-10 pt-10 scroll-target" id="DesignAndEngineering">
+    <section class="design-engineering-section my-10 pt-10">
+      <div class="scroll-target" id="DesignAndEngineering">&nbsp;</div>
       <div
         class="design-engineering-container"
       >
@@ -83,10 +91,82 @@
       </div>
     </section>
 
-    <section class="faq-section my-10 pt-10 scroll-target" id="FAQs">
+    <section class="service-and-support-section my-10 pt-10">
+      <div class="scroll-target" id="ServiceAndSupport">&nbsp;</div>
+      <div
+        class="service-and-support-container fixed-bg"
+        :style="`background-image: url(${getImageUrl('../assets/images/solar-w-turbines.webp')});`"
+      >
+        <div class="h-full w-full backdrop-brightness-50 m-0">
+          <div class="w-auto">
+            <div class="container mx-auto px-40 faq-container py-25">
+              <HomeServiceAndSupport />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="integration-section my-10 pt-10">
+      <div class="scroll-target" id="Integration">&nbsp;</div>
+      <div class="integration-container">
+        <div class="h-full w-full m-0">
+          <div class="w-auto">
+            <div class="container mx-auto">
+              <HomeIntegration />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="installation-section my-10 pt-10">
+      <div class="scroll-target" id="Installation">&nbsp;</div>
+      <div class="installation-container">
+        <div class="h-full w-full m-0">
+          <div class="w-auto">
+            <div class="container mx-auto">
+              <HomeInstallation />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solar-section my-10 pt-10">
+      <div class="scroll-target" id="SolarServices">&nbsp;</div>
+      <div
+        class="solar-container fixed-bg"
+        :style="`background-image: url(${getImageUrl('../assets/images/16_AES-Lawai-Solar_1-scaled-1920w.webp')});`"
+      >
+        <div class="h-full w-full backdrop-brightness-50 m-0">
+          <div class="w-auto">
+            <div class="container mx-auto px-40 faq-container py-25">
+              <HomeSolar />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wind-section my-10 pt-10">
+      <div class="scroll-target" id="WindServices">&nbsp;</div>
+      <div class="wind-container">
+        <div class="h-full w-full m-0">
+          <div class="w-auto">
+            <div class="container mx-auto">
+              <HomeWind />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section my-10 pt-10">
+      <div class="scroll-target" id="FAQs">&nbsp;</div>
       <div
         class="faq-container fixed-bg"
-        :style="`background-image: url(${getImageUrl('../assets/images/solar-blur-bg.png')});`"
+        :style="`background-image: url(${getImageUrl('../assets/images/solar-blur-bg.webp')});`"
       >
         <div class="h-full w-full backdrop-brightness-50 m-0">
           <div class="w-auto">
@@ -99,10 +179,11 @@
       </div>
     </section>
 
-    <section class="contact-us-section my-10 pt-10 scroll-target" id="ContactUs">
+    <section class="contact-us-section my-10 pt-10">
+      <div class="scroll-target" id="ContactUs">&nbsp;</div>
       <div
         class="contact-us-container bg-cover bg-center"
-        :style="`background-image: url(${getImageUrl('../assets/images/turbines-blue-bg.jpeg')});`"
+        :style="`background-image: url(${getImageUrl('../assets/images/turbines-blue-bg.webp')});`"
       >
         <div class="h-full w-full backdrop-brightness-50 text-white m-0">
           <div class="w-auto">

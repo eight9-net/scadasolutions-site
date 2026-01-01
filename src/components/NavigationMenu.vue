@@ -36,10 +36,11 @@ const links = shallowRef({
   ],
   services: [
     { name: 'home', hash: '#DesignAndEngineering', title: 'Design and Engineering' },
+    { name: 'home', hash: '#ServiceAndSupport', title: 'Service and Support' },
     { name: 'home', hash: '#Integration', title: 'Integration' },
     { name: 'home', hash: '#Installation', title: 'Installation' },
-    { name: 'home', hash: '#ServiceAndSupport', title: 'Service and Support' },
     { name: 'home', hash: '#SolarServices', title: 'Solar Services' },
+    { name: 'home', hash: '#WindServices', title: 'Wind Services' },
   ],
   windpower: [
     { name: 'windenergytutorial', title: 'Wind Energy Tutorial' },
