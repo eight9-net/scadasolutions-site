@@ -23,11 +23,9 @@
   });
 
   function startImageRotation() {
-    console.log('Starting hero image rotation');
     // Rotate hero image every 10 seconds
     intervalId = setInterval(() => {
       currentHeroImageIdxRef.value = (currentHeroImageIdxRef.value + 1) % heroImagesRef.length;
-      console.log('Hero image changed to index:', currentHeroImageIdxRef.value);
     }, 5000);
   }
 </script>
