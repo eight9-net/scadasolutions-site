@@ -4,11 +4,28 @@
 <template>
   <div>
 
-    <h2 class="headline text-3xl font-normal mb-10 text-center">Integrating Tomorrow's Energy. Today.</h2>
-    <div class="mx-auto">Video1</div>
+    <h2 class="headline text-2xl md:text-3xl font-normal text-center mt-10 mb-3">Integrating Tomorrow's Energy. Today.</h2>
+    <div class="aspect-video">
+      <iframe
+        class="w-full h-full max-h-[540px] max-w-[960px] mx-auto"
+        src="https://player.vimeo.com/video/1148983289?color=0c88dd&title=0&byline=0&portrait=0&badge=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+      ></iframe>
 
-    <h2 class="headline text-3xl font-normal mb-10 text-center">SUN, BIO, WIND, WATER, WASTE WATER</h2>
-    <div class="mx-auto">Video2</div>
+    </div>
+
+    <h2 class="headline text-2xl md:text-3xl font-normal text-center mt-10 mb-3">SUN, BIO, WIND, WATER, WASTE WATER</h2>
+    <div class="aspect-video">
+      <iframe
+        class="w-full h-full max-h-[540px] max-w-[960px] mx-auto"
+        src="https://www.youtube.com/embed/v9_rRJJ_1JY"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
 
   </div>
 </template>

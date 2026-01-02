@@ -32,7 +32,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content text-neutral-content text-center">
           <div class="w-full mx-auto max-w-4xl">
-            <h1 class="headline uppercase mb-5 text-5xl font-normal">Streamlined Integration Solutions for Industrial Automation</h1>
+            <h1 class="headline uppercase mb-5 text-3xl md:text-5xl font-normal">Streamlined Integration Solutions for Industrial Automation</h1>
             <div class="headline mb-5 text-2xl my-6 font-light">
               Control Systems Integration Services | Irvine
             </div>
