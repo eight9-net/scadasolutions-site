@@ -11,7 +11,6 @@ import WindFacts from '../views/WindFacts.vue';
 import Glossary from '../views/Glossary.vue';
 import News from '../views/News.vue';
 import Careers from '../views/Careers.vue';
-import Contact from '../components/Contact.vue';
 
 const routes = [
   {
@@ -73,11 +72,6 @@ const routes = [
         name: 'news',
         component: News
       },
-      {
-        path: 'contact',
-        name: 'contact',
-        component: Contact
-      }
     ]
   }
 ];

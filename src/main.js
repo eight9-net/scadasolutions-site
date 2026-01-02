@@ -16,7 +16,10 @@ library.add(
   faPhone,
   faEnvelope,
 );
-// import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+library.add(
+  faLinkedin
+);
 
 const app = createApp(App);
 

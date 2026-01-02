@@ -1,5 +1,6 @@
 <script setup>
-  import { computed } from 'vue';
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { computed } from 'vue';
 
   const currentYear = computed(() => new Date().getFullYear());
 </script>
@@ -26,6 +27,9 @@
             </li>
           </ul>
           <h3 class="my-5 font-bold">Registered California DIR Public Works Contractor #949-509-9605</h3>
+          <div class="text-blue-600 text-4xl my-10">
+            <a href="https://linkedin.com/company/scada-solutions-llc?trk=public_profile_topcard-current-company" alt="Visit us on LinkedIn"><FontAwesomeIcon :icon="['fab', 'linkedin']" /></a>
+          </div>
         </div>
         <div class="flex-1 footer-column">
           <h2 class="my-10">Map...</h2>
