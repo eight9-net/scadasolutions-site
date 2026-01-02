@@ -138,7 +138,7 @@
       >
         <div class="h-full w-full backdrop-brightness-50 m-0">
           <div class="w-auto">
-            <div class="container mx-auto px-40 faq-container py-25">
+            <div class="container mx-auto px-5 md:px-40 faq-container py-25">
               <HomeSolar />
             </div>
           </div>
@@ -167,7 +167,7 @@
       >
         <div class="h-full w-full backdrop-brightness-50 m-0">
           <div class="w-auto">
-            <div class="container mx-auto px-40 faq-container py-25">
+            <div class="container mx-auto px-5 md:px-40 faq-container py-25">
               <h2 class="headline text-3xl font-normal mb-10 text-white text-center">Frequently Asked Questions</h2>
               <HomeFaq />
             </div>
@@ -186,21 +186,21 @@
           <div class="w-auto">
             <div class="container mx-auto lg:px-40 faq-container py-25 text-center">
               <h2 class="headline text-3xl font-normal mb-10 text-white text-center">Contact Us</h2>
-              <div class="my-4 mx-auto md:mx-40">
+              <div class="my-4 mx-auto px-5 md:px-40">
                 <p>Call Us</p>
                 <p>
                   <FontAwesomeIcon :icon="['fa', 'phone']" />
                   <a href="tel:+19495989605" class="ms-1">949-598-9605</a>
                 </p>
               </div>
-              <div class="my-4 mx-auto md:mx-40">
+              <div class="my-4 mx-auto px-5 md:px-40">
                 <p>Email Us</p>
                 <p>
                   <FontAwesomeIcon :icon="['fa', 'envelope']" />
                   <a href="mailto:info@scadasolutions.com" class="ms-1">info@scadasolutions.com</a>
                 </p>
               </div>
-              <p class="my-4 mx-auto md:mx-40">
+              <p class="my-4 mx-auto px-5 md:px-40">
                 Enter your information below along with a brief message and your contact details. A member of our team will be in touch with you as soon as possible to schedule a consultation.
               </p>
               <HomeContactForm />
