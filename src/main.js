@@ -10,11 +10,13 @@ import {
   faBars,
   faPhone,
   faEnvelope,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
   faBars,
   faPhone,
   faEnvelope,
+  faTimes,
 );
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 library.add(

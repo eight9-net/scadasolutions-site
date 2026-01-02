@@ -1,3 +1,6 @@
+<script setup>
+  import Gallery from './Gallery.vue';
+</script>
 
 <template>
   <div class="flex flex-col lg:flex-row gap-4 text-center lg:text-left">
@@ -11,22 +14,13 @@
     </div>
 
     <div class="w-full lg:w-1/2 p-4">
-      <div class="flex">
-        <div class="flex-1 m-2">
-          <img :src="$getImageUrl('windcapture-01-1920w.webp')" alt="SCADA Product Overview 1" />
-        </div>
-        <div class="flex-1 m-2">
-          <img :src="$getImageUrl('windcapture-02-1920w.webp')" alt="SCADA Product Overview 2" />
-        </div>
-      </div>
-      <div class="flex">
-        <div class="flex-1 m-2">
-          <img :src="$getImageUrl('windcapture-03-1920w.webp')" alt="SCADA Product Overview 3" />
-        </div>
-        <div class="flex-1 m-2">
-          <img :src="$getImageUrl('windcapture-04-1920w.webp')" alt="SCADA Product Overview 4" />
-        </div>
-      </div>
+      <Gallery :images="[
+        { src: 'windcapture-01-1920w.webp', alt: 'SCADA Product Overview 1' },
+        { src: 'windcapture-02-1920w.webp', alt: 'SCADA Product Overview 2' },
+        { src: 'windcapture-03-1920w.webp', alt: 'SCADA Product Overview 3' },
+        { src: 'windcapture-04-1920w.webp', alt: 'SCADA Product Overview 4' },
+      ]" />
+
     </div>
 
   </div>

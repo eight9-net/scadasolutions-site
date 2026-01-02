@@ -1,5 +1,5 @@
 <script setup>
-  import { computed, ref } from 'vue';
+  import HomeHero from '../components/HomeHero.vue';
   import HomeExplanation from '../components/HomeExplanation.vue';
   import HomeProductOverview from '../components/HomeProductOverview.vue';
   import HomeDesignEngineering from '../components/HomeDesignEngineering.vue';
@@ -11,36 +11,12 @@
   import HomeFaq from '../components/HomeFaq.vue';
   import HomeContactForm from '../components/HomeContactForm.vue';
 
-  const currentHeroImageIdxRef = ref(0);
-  const heroImagesRef = ref([
-    'hero-bg-1.webp',
-    'hero-bg-2.webp',
-    'hero-bg-3.webp',
-  ]);
-  const currentHeroImageComputed = computed(() => heroImagesRef.value[currentHeroImageIdxRef.value]);
-
 </script>
 
 <template>
   <div class="home">
 
-    <section class="hero">
-      <div
-        class="hero min-h-screen"
-        :style="`background-image: url(${$getImageUrl(currentHeroImageComputed)});`"
-      >
-        <div class="hero-overlay"></div>
-        <div class="hero-content text-neutral-content text-center">
-          <div class="w-full mx-auto max-w-4xl">
-            <h1 class="headline uppercase mb-5 text-3xl md:text-5xl font-normal">Streamlined Integration Solutions for Industrial Automation</h1>
-            <div class="headline mb-5 text-2xl my-6 font-light">
-              Control Systems Integration Services | Irvine
-            </div>
-            <router-link :to="{ name: 'home', hash: '#ContactUs' }" class="btn btn-soft btn-primary btn-lg my-4">Contact Us</router-link>
-          </div>
-        </div>
-      </div>
-    </section>
+    <HomeHero />
 
     <section class="explanation-section my-10 pt-10">
       <div class="scroll-target" id="Explanation">&nbsp;</div>
