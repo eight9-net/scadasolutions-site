@@ -15,6 +15,12 @@ import { computed } from 'vue';
           <p class="copyright my-10 text-xs">&copy; {{ currentYear}} All Rights Reserved | SCADA Solutions, Inc.</p>
         </div>
         <div class="w-full md:w-1/3 text-center">
+          <h3 class="my-5 font-bold">Registered California DIR Public Works Contractor<br />#949-509-9605</h3>
+          <div class="text-blue-600 text-4xl my-10">
+            <a href="https://linkedin.com/company/scada-solutions-llc?trk=public_profile_topcard-current-company" alt="Visit us on LinkedIn"><FontAwesomeIcon :icon="['fab', 'linkedin']" /></a>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 text-center">
           <h2 class="headline m-5 text-3xl font-normal">Contact Information</h2>
           <ul>
             <li class="my-5">
@@ -26,13 +32,6 @@ import { computed } from 'vue';
               <a href="mailto:info@scadasolutions.com" class="ms-1">info@scadasolutions.com</a>
             </li>
           </ul>
-          <h3 class="my-5 font-bold">Registered California DIR Public Works Contractor #949-509-9605</h3>
-          <div class="text-blue-600 text-4xl my-10">
-            <a href="https://linkedin.com/company/scada-solutions-llc?trk=public_profile_topcard-current-company" alt="Visit us on LinkedIn"><FontAwesomeIcon :icon="['fab', 'linkedin']" /></a>
-          </div>
-        </div>
-        <div class="w-full md:w-1/3 text-center">
-          <h2 class="my-10">Map...</h2>
         </div>
 
       </div>
