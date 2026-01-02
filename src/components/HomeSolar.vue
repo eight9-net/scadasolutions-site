@@ -1,10 +1,3 @@
-<script setup>
-  function getImageUrl(image) {
-    return new URL(image, import.meta.url).href;
-  }
-
-</script>
-
 <template>
 
   <div class="text-center">

@@ -3,9 +3,6 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import NavigationMenu from './NavigationMenu.vue';
 
-function getImageUrl(image) {
-  return new URL(image, import.meta.url).href
-}
 </script>
 
 <template>
@@ -19,7 +16,7 @@ function getImageUrl(image) {
           <navigation-menu classes="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-100" :hover="false" :border="false" />
         </div>
         <router-link :to="{ name: 'home' }">
-          <img class="max-w-[275px] sm:max-w-[400px]" :src="getImageUrl('../assets/images/scada-solutions-logo.png')" alt="SCADA Solutions" />
+          <img class="max-w-[275px] sm:max-w-[400px]" :src="$getImageUrl('scada-solutions-logo.png')" alt="SCADA Solutions" />
         </router-link>
       </div>
 

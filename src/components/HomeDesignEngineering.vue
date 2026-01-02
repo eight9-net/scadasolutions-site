@@ -1,16 +1,10 @@
-<script setup>
-  function getImageUrl(image) {
-    return new URL(image, import.meta.url).href;
-  }
-
-</script>
 
 <template>
   <div class="flex">
 
     <div
       class="flex-1 bg-cover bg-top"
-      :style="`background-image: url(${getImageUrl('../assets/images/turbine.webp')});`"
+      :style="`background-image: url(${$getImageUrl('turbine.webp')});`"
     >
       &nbsp;
     </div>

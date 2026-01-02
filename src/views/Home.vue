@@ -13,15 +13,12 @@
 
   const currentHeroImageIdxRef = ref(0);
   const heroImagesRef = ref([
-    '../assets/images/hero-bg-1.webp',
-    '../assets/images/hero-bg-2.webp',
-    '../assets/images/hero-bg-3.webp',
+    'hero-bg-1.webp',
+    'hero-bg-2.webp',
+    'hero-bg-3.webp',
   ]);
   const currentHeroImageComputed = computed(() => heroImagesRef.value[currentHeroImageIdxRef.value]);
 
-  function getImageUrl(image) {
-    return new URL(image, import.meta.url).href;
-  }
 </script>
 
 <template>
@@ -30,7 +27,7 @@
     <section class="hero">
       <div
         class="hero min-h-screen"
-        :style="`background-image: url(${getImageUrl(currentHeroImageComputed)});`"
+        :style="`background-image: url(${$getImageUrl(currentHeroImageComputed)});`"
       >
         <div class="hero-overlay"></div>
         <div class="hero-content text-neutral-content text-center">
@@ -95,7 +92,7 @@
       <div class="scroll-target" id="ServiceAndSupport">&nbsp;</div>
       <div
         class="service-and-support-container fixed-bg"
-        :style="`background-image: url(${getImageUrl('../assets/images/solar-w-turbines.webp')});`"
+        :style="`background-image: url(${$getImageUrl('solar-w-turbines.webp')});`"
       >
         <div class="h-full w-full backdrop-brightness-50 m-0">
           <div class="w-auto">
@@ -137,7 +134,7 @@
       <div class="scroll-target" id="SolarServices">&nbsp;</div>
       <div
         class="solar-container fixed-bg"
-        :style="`background-image: url(${getImageUrl('../assets/images/16_AES-Lawai-Solar_1-scaled-1920w.webp')});`"
+        :style="`background-image: url(${$getImageUrl('16_AES-Lawai-Solar_1-scaled-1920w.webp')});`"
       >
         <div class="h-full w-full backdrop-brightness-50 m-0">
           <div class="w-auto">
@@ -166,7 +163,7 @@
       <div class="scroll-target" id="FAQs">&nbsp;</div>
       <div
         class="faq-container fixed-bg"
-        :style="`background-image: url(${getImageUrl('../assets/images/solar-blur-bg.webp')});`"
+        :style="`background-image: url(${$getImageUrl('solar-blur-bg.webp')});`"
       >
         <div class="h-full w-full backdrop-brightness-50 m-0">
           <div class="w-auto">
@@ -183,7 +180,7 @@
       <div class="scroll-target" id="ContactUs">&nbsp;</div>
       <div
         class="contact-us-container bg-cover bg-center"
-        :style="`background-image: url(${getImageUrl('../assets/images/turbines-blue-bg.webp')});`"
+        :style="`background-image: url(${$getImageUrl('turbines-blue-bg.webp')});`"
       >
         <div class="h-full w-full backdrop-brightness-50 text-white m-0">
           <div class="w-auto">

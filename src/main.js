@@ -18,8 +18,15 @@ library.add(
 );
 // import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
-
 const app = createApp(App);
+
+// Global Helpers
+const getImageUrl = function(image) {
+  return new URL('/images/' + image, import.meta.url).href
+}
+app.config.globalProperties.$getImageUrl = getImageUrl;
+
+
 app.use(router);
 app.component('FontAwesomeIcon', FontAwesomeIcon);
 app.mount('#app');

@@ -2,9 +2,6 @@
   import { computed } from 'vue';
 
   const currentYear = computed(() => new Date().getFullYear());
-  function getImageUrl(image) {
-    return new URL(image, import.meta.url).href;
-  }
 </script>
 
 <template>
@@ -13,7 +10,7 @@
       <div class="w-full flex text-center">
 
         <div class="flex-1 footer-column">
-          <img class="max-w-[350px] mx-auto" :src="getImageUrl('../assets/images/scada-solutions-logo.png')" />
+            <img class="max-w-[350px] mx-auto" :src="$getImageUrl('scada-solutions-logo.png')" />
           <p class="copyright my-10 text-xs">&copy; {{ currentYear}} All Rights Reserved | SCADA Solutions, Inc.</p>
         </div>
         <div class="flex-1 footer-column">

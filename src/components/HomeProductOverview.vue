@@ -1,9 +1,3 @@
-<script setup>
-  function getImageUrl(image) {
-    return new URL(image, import.meta.url).href;
-  }
-
-</script>
 
 <template>
   <div class="flex">
@@ -19,18 +13,18 @@
     <div class="flex-1 m-5">
       <div class="flex">
         <div class="flex-1 m-2">
-          <img :src="getImageUrl('../assets/images/windcapture-01-1920w.webp')" alt="SCADA Product Overview 1" />
+          <img :src="$getImageUrl('windcapture-01-1920w.webp')" alt="SCADA Product Overview 1" />
         </div>
         <div class="flex-1 m-2">
-          <img :src="getImageUrl('../assets/images/windcapture-02-1920w.webp')" alt="SCADA Product Overview 2" />
+          <img :src="$getImageUrl('windcapture-02-1920w.webp')" alt="SCADA Product Overview 2" />
         </div>
       </div>
       <div class="flex">
         <div class="flex-1 m-2">
-          <img :src="getImageUrl('../assets/images/windcapture-03-1920w.webp')" alt="SCADA Product Overview 1" />
+          <img :src="$getImageUrl('windcapture-03-1920w.webp')" alt="SCADA Product Overview 3" />
         </div>
         <div class="flex-1 m-2">
-          <img :src="getImageUrl('../assets/images/windcapture-04-1920w.webp')" alt="SCADA Product Overview 2" />
+          <img :src="$getImageUrl('windcapture-04-1920w.webp')" alt="SCADA Product Overview 4" />
         </div>
       </div>
     </div>
