@@ -7,6 +7,7 @@
     'hero-bg-3.webp',
   ];
 
+  let intervalId = ref(null);
   const currentHeroImageIdxRef = ref(0);
   const currentHeroImageComputed = computed(() => {
     return heroImagesRef[currentHeroImageIdxRef.value];
@@ -24,7 +25,7 @@
   function startImageRotation() {
     console.log('Starting hero image rotation');
     // Rotate hero image every 10 seconds
-    setInterval(() => {
+    intervalId = setInterval(() => {
       currentHeroImageIdxRef.value = (currentHeroImageIdxRef.value + 1) % heroImagesRef.length;
       console.log('Hero image changed to index:', currentHeroImageIdxRef.value);
     }, 5000);
