@@ -6,7 +6,13 @@
     last_name: '',
     phone: '',
     email: '',
-    message: ''
+    message: '',
+    subject: '',
+    property_type: '',
+    company: '',
+    schedule: 'no',
+    is_valid: '',
+
   });
 
   function sendContactForm(data) {
@@ -82,6 +88,56 @@
         <div class="validator-hint hidden">Enter valid email address</div>
       </fieldset>
     </div>
+
+    <div class="flex gap-4">
+      <fieldset class="fieldset flex-3">
+        <label class="input validator w-full">
+          <input
+            type="text"
+            required
+            name="subject"
+            placeholder="Subject"
+            minlength="1"
+            maxlength="150"
+            v-model="form.subject"
+          />
+        </label>
+        <div class="validator-hint hidden">Subject is required</div>
+      </fieldset>
+    </div>
+
+    <div class="flex gap-4">
+      <fieldset class="fieldset flex-3">
+        <label class="input validator w-full">
+          <input
+            type="text"
+            required
+            name="property_type"
+            placeholder="Property Type"
+            minlength="1"
+            maxlength="100"
+            v-model="form.property_type"
+          />
+        </label>
+        <div class="validator-hint hidden">Company is required</div>
+      </fieldset>
+      <fieldset class="fieldset flex-3">
+        <label class="input validator w-full">
+          <input
+            type="text"
+            name="company"
+            placeholder="Company Name (Optional)"
+            minlength="1"
+            maxlength="150"
+            v-model="form.company"
+          />
+        </label>
+        <div class="validator-hint hidden">Company is required</div>
+      </fieldset>
+    </div>
+
+    <div class="hidden"><input type="text" name="is_valid" v-model="form.is_valid"/></div>
+
 
     <div class="flex gap-4">
       <fieldset class="fieldset flex-3">
