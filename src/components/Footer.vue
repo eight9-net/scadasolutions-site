@@ -7,14 +7,14 @@ import { computed } from 'vue';
 
 <template>
   <footer class="footer-section">
-    <div class="container mx-auto">
-      <div class="w-full flex text-center">
+    <div class="container w-full md:mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
 
-        <div class="flex-1 footer-column">
-            <img class="max-w-[350px] mx-auto" :src="$getImageUrl('scada-solutions-logo.png')" />
+        <div class="w-full md:w-1/3 text-center">
+            <img class="max-w-[300px] lg:max-w-[350px] mx-auto" :src="$getImageUrl('scada-solutions-logo.png')" />
           <p class="copyright my-10 text-xs">&copy; {{ currentYear}} All Rights Reserved | SCADA Solutions, Inc.</p>
         </div>
-        <div class="flex-1 footer-column">
+        <div class="w-full md:w-1/3 text-center">
           <h2 class="headline m-5 text-3xl font-normal">Contact Information</h2>
           <ul>
             <li class="my-5">
@@ -31,7 +31,7 @@ import { computed } from 'vue';
             <a href="https://linkedin.com/company/scada-solutions-llc?trk=public_profile_topcard-current-company" alt="Visit us on LinkedIn"><FontAwesomeIcon :icon="['fab', 'linkedin']" /></a>
           </div>
         </div>
-        <div class="flex-1 footer-column">
+        <div class="w-full md:w-1/3 text-center">
           <h2 class="my-10">Map...</h2>
         </div>
 
