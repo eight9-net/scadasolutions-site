@@ -43,7 +43,7 @@ function onHover(state) {
         <router-link :to="link" v-if="link">{{ title }}</router-link>
         <span v-else>{{ title }}</span>
       </summary>
-      <ul :class="`bg-base-100 rounded-t-none ${borderClass} p-2 w-52 subnav`">
+      <ul :class="`bg-base-100 rounded-t-none ${borderClass} p-2 w-52 subnav z-50`">
         <li v-for="(item, index) in links" :key="index">
           <router-link :to="{ name: item.name, hash: item.hash }">{{ item.title }}</router-link>
         </li>

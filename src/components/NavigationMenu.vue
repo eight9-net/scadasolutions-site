@@ -3,7 +3,7 @@
 const props = defineProps({
   classes: {
     type: String,
-    default: 'menu menu-horizontal px-1'
+    default: 'menu menu-horizontal px-1 text-lg grid-autoflow justify-center'
   },
   hover: {
     type: Boolean,
