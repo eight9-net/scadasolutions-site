@@ -49,7 +49,7 @@
       >
         <div class="h-full w-full m-0">
           <div class="w-auto">
-            <div class="container mx-auto px-40 py-25">
+            <div class="container mx-auto px-5 md:px-40 py-25">
               <HomeExplanation />
             </div>
           </div>
@@ -96,7 +96,7 @@
       >
         <div class="h-full w-full backdrop-brightness-50 m-0">
           <div class="w-auto">
-            <div class="container mx-auto px-40 faq-container py-25">
+            <div class="container mx-auto px-5 md:px-40 faq-container py-25">
               <HomeServiceAndSupport />
             </div>
           </div>

@@ -1,16 +1,16 @@
 
 <template>
-  <div class="flex">
+  <div class="flex flex-col lg:flex-row gap-4 text-center lg:text-left">
 
-    <div class="flex-1 m-5">
-      <h2 class="headline text-3xl font-normal mb-10 text-left">Seamless SCADA Solutions for Uninterrupted Operations</h2>
+    <div class="w-full lg:w-1/2 p-4">
+      <h2 class="headline text-3xl font-normal mb-10">Seamless SCADA Solutions for Uninterrupted Operations</h2>
       <p class="mx-auto">SCADA Solutions, Inc. capabilities in system design engineering of complete SCADA solutions, coupled with our experienced and professional installation knowledge, allow for seamless delivery and implementation with minimal operational interruption. Our superior communication, automation, and integration capabilities and ability to serve all brands of turbines, both old and new, set us apart from other third-party SCADA providers.</p>
       <div class="mx-auto">
         <router-link :to="{ name: 'home', hash: '#ContactUs' }" class="btn btn-primary mt-5 btn-lg">Get in Touch</router-link>
       </div>
     </div>
 
-    <div class="flex-1 m-5">
+    <div class="w-full lg:w-1/2 p-4">
       <div class="flex">
         <div class="flex-1 m-2">
           <img :src="$getImageUrl('windcapture-01-1920w.webp')" alt="SCADA Product Overview 1" />
