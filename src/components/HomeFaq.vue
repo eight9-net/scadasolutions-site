@@ -1,6 +1,7 @@
 <script setup>
   import { ref } from 'vue';
   import Accordion from './Accordion.vue';
+import ContentFullSection from './ContentFullSection.vue';
   const faqRef = ref([
     {
       title: 'Why is SCADA Solutions, Inc. so popular?',
@@ -41,6 +42,14 @@
 </script>
 
 <template>
-  <Accordion :items="faqRef" name="faq-accordion">
-  </Accordion>
+  <ContentFullSection
+    name="faq"
+    id="FAQs"
+    image="solar-blur-bg.webp"
+    title="Frequently Asked Questions"
+    :button="false"
+  >
+    <Accordion :items="faqRef" name="faq-accordion" />
+  </ContentFullSection>
+
 </template>

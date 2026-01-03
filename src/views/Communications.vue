@@ -19,16 +19,10 @@ import ProductsHero from '../components/PageHero.vue';
         <div class="w-auto mx-10">
           <div class="my-5">
             <h2 class="headline text-3xl md:text-4xl font-normal mb-10 text-left">Distributed Automation</h2>
-            <p class="mx-auto mb-10">SCADA Solutions' flagship product, WindCapture&trade;, is a Supervisory Control and Data Acquisition (SCADA) software package used for monitoring, controlling, data collection, and reporting for wind turbine generators (WTG). It was designed and tailored to the demands of manufacturers, operators, developers, and maintenance managers of wind energy projects and facilities. Nearly a year in the making, the results are a completely integrated control design essential to the utilization and maintenance of critical renewable energy assets.</p>
-            <p class="mx-auto mb-10">Regardless of the make of turbines in your project(s), SSI customizes WindCapture&trade; with every installation to ensure the reliable flow and presentation of needed data. The system also combines a comprehensive database management system for standardized and customized operations reports with powerful analytic graphs, charts, tables, and other tools. You can use preset timetables or input any time period parameter and easily export to Excel&trade;.</p>
-            <p class="mx-auto mb-10">WindCapture&trade; has numerous usable, integrated functions that work with your infrastructure's communications network. Some of the various valuable features include:</p>
-
-            <h4 class="headline text-xl font-bold mb-5 mt-10 text-blue-400">Scalability</h4>
-            <p class="mx-auto mb-10">The SCADA systems currently found on many larger wind farms and farms consisting of older turbines have difficulty dealing with expansion and suffer from significant performance drops as a farm grows since they lack scalability. WindCapture&trade; is engineered to handle any number of turbines and is easily upgraded to sustain any future growth. SSI can connect your projects and your various farms together. Our design platforms also support projects consisting of several different types of turbines.</p>
-            <p class="mx-auto mb-10">As wind generation becomes increasingly widespread, it is necessary that operating SCADA systems are also compatible with enterprise systems. Additionally, they need to report data to enterprise resource planning (ERP), supply chain, financial, and operating systems. If a user requires specific plant information, they will be able to access it remotely without having to place a telephone call to transmit the data.</p>
-
-            <h4 class="headline text-xl font-bold mb-5 mt-10 text-blue-400">Reporting</h4>
-            <p class="mx-auto mb-10">In addition to minimizing the amount of data lost, SSI's WindCapture&trade; systems provide real-time reporting with the highest degree of accuracy. If operators are able to quickly identify and measure the issues in a process, they can systematically figure out how to eliminate them and get as close to a zero forced outage rate as possible. Additionally, trend and analysis reporting is increasingly important for owners and operators. Production curves, optimization graphs, and comparative analysis reports are a simple point-and-click away and can be easily exported to Excel&trade; for further manipulation and presentation.</p>
+            <p class="mx-auto mb-10"></p>
+            <p class="mx-auto mb-10"></p>
+            <p class="mx-auto mb-10"></p>
+            <p class="mx-auto mb-10"></p>
           </div>
         </div>
 

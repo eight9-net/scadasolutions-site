@@ -32,7 +32,13 @@ const getImageUrl = function(image) {
 app.config.globalProperties.$getImageUrl = getImageUrl;
 
 // Global Components
+import ContentLeftSection from './components/ContentLeftSection.vue';
+import ContentRightSection from './components/ContentRightSection.vue';
+import ContentFullSection from './components/ContentFullSection.vue';
 import ContactButton from './components/ContactButton.vue';
+app.component('ContentLeftSection', ContentLeftSection);
+app.component('ContentRightSection', ContentRightSection);
+app.component('ContentFullSection', ContentFullSection);
 app.component('ContactButton', ContactButton);
 
 app.use(router);
