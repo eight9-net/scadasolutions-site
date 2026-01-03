@@ -7,6 +7,10 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+  cols: {
+    type: String,
+    default: '2',
+  }
 });
 
 const isModalOpen = ref(false);
@@ -30,8 +34,7 @@ const closeModal = () => {
 
 <template>
   <div>
-
-    <div class="grid grid-cols-2 gap-4">
+    <div :class="`grid grid-cols-1 md:grid-cols-${props.cols} gap-4`">
       <div
         v-for="(image, index) in props.images"
         :key="index"
@@ -41,7 +44,7 @@ const closeModal = () => {
         <img
           :src="$getImageUrl(image.src)"
           :alt="image.alt"
-          class="w-full h-48 object-cover"
+          class="w-full h-full object-cover"
         />
       </div>
     </div>

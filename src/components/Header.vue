@@ -25,7 +25,7 @@ import NavigationMenu from './NavigationMenu.vue';
       </div>
 
       <div class="navbar-end ml-5 flex-1">
-        <router-link class="btn btn-primary" :to="{ name: 'home', hash: '#ContactUs'}">Contact Us</router-link>
+        <ContactButton />
       </div>
     </div>
   </header>

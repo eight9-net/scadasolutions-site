@@ -31,6 +31,9 @@ const getImageUrl = function(image) {
 }
 app.config.globalProperties.$getImageUrl = getImageUrl;
 
+// Global Components
+import ContactButton from './components/ContactButton.vue';
+app.component('ContactButton', ContactButton);
 
 app.use(router);
 app.component('FontAwesomeIcon', FontAwesomeIcon);

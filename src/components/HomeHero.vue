@@ -43,7 +43,7 @@
       >
         <div
           :key="currentHeroImageComputed"
-          class="hero-overlaya absolute inset-0 bg-cover bg-center"
+          class="hero-overlay absolute inset-0 bg-cover bg-center"
           :style="`background-image: url(${$getImageUrl(currentHeroImageComputed)});`"
         ></div>
       </Transition>
@@ -55,7 +55,7 @@
           <div class="headline mb-5 text-2xl my-6 font-light">
             Control Systems Integration Services | Irvine
           </div>
-          <router-link :to="{ name: 'home', hash: '#ContactUs' }" class="btn btn-soft btn-primary btn-lg my-4">Contact Us</router-link>
+          <ContactButton classes="btn btn-soft btn-primary btn-lg my-4 border border-2 border-primary" />
         </div>
       </div>
     </div>

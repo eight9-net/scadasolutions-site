@@ -13,7 +13,7 @@
       <h2 class="headline text-3xl font-normal mb-10 text-left">Tailored Design and Engineering Solutions by Expert Professionals</h2>
       <p class="mx-auto">Our team of skilled engineers and designers is ready to support you with your design and engineering requirements. We provide detailed, expert programming tailored to meet your specific requests and needs. This encompasses identifying the right components and disciplines for integration, determining configuration details and installation specifications, and guaranteeing the utmost efficiency and effectiveness of the final product.</p>
       <div class="mx-auto mb-10">
-        <router-link :to="{ name: 'home', hash: '#ContactUs' }" class="btn btn-primary mt-5 btn-lg">Reach Out</router-link>
+        <ContactButton buttonText="Reach Out" />
       </div>
     </div>
 
