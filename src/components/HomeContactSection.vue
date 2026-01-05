@@ -36,9 +36,6 @@
             <HomeContactForm />
           </div>
 
-          <div class="w-full flex items-center justify-center bg-blue-400 m-0">
-            <h2 class="text-1xl text-white p-2">Control Systems Integration</h2>
-          </div>
         </div>
       </div>
     </div>
