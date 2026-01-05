@@ -1,4 +1,8 @@
 <script setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import ContentFullSection from '../components/ContentFullSection.vue';
+import ContentLeftSection from '../components/ContentLeftSection.vue';
+import ContentRightSection from '../components/ContentRightSection.vue';
 import ProductsHero from '../components/PageHero.vue';
 
 
@@ -11,50 +15,78 @@ import ProductsHero from '../components/PageHero.vue';
 <template>
   <ProductsHero title="Communications" />
 
-  <section class="communications-section my-10 pt-10">
-    <div class="scroll-target" id="Communications">&nbsp;</div>
-    <div class="communications-container mx-auto text-base/8">
+  <ContentLeftSection
+    name="distributed-automation"
+    id="DistributedAutomation"
+    image="solar-blur-bg.webp"
+    title="Distributed Automation"
+    contentBgColor="bg-white/90"
+    >
+    <p class="mx-auto my-10">
+      SCADA Solutions has teamed with communications innovator Landis+Gyr, a worldwide leader in electricity metering and energy management, to integrate advanced radio technologies into the wind industry.
+    </p>
+    <p class="mx-auto my-10">
+      Distributed automation solutions require several key elements, from the end devices to the host application, with a strong communication network in between. Inherent features of the communication network include real-time two-way communications, scalability, reliability with self-healing capabilities, and a high level of security while being cost-effective for today's deployments. Three critical technologies from Landis+Gyr allow SCADA Solutions to integrate and create its intelligent windfarm communications networks: an RF mesh architecture with peer-to-peer communication and network functionality; asynchronous spread spectrum frequency hopping for maximum use of bandwidth; and packet switching for automatic error checking, retries, and store-and-forward routing.
+    </p>
+    <p class="mx-auto my-10">
+      Landis+Gyr's full two-way wireless RF mesh communication network, currently used by more than 200 utilities worldwide for distribution automation and SCADA controls, is an integral piece of SSI's windfarm communications solutions. The distributed automation radios form the foundation of an RF mesh network and serve multiple functions. Each radio can communicate with end devices for data collection, monitoring, or control functions. This may involve transparent applications where data is merely passed through the network. Or it may involve programs running within the radios and/or other gateway devices to perform custom applications, increase network efficiency, or enhance network functionality. Additionally, each radio interacts with its neighboring radios to form a wide area network (WAN), into which it may initiate a packet, automatically route a packet between other radios, or accept a packet as the final destination.
+    </p>
+    <p class="mx-auto my-10">
+      SCADA Solutions' strategic partnership with Landis+Gyr allows the company to deliver the most advanced radio technologies available in the marketplace. Landis+Gyr has over 5,000 employees, including 600 full-time professionals dedicated to R&D and operations, in 30 countries across five continents. The partnership is committed to providing end-to-end, advanced communications solutions that will empower the next generation of smart grid wind farms.
+    </p>
+  </ContentLeftSection>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 align-top">
-        <div class="w-auto mx-10">
-          <div class="my-5">
-            <h2 class="headline text-3xl md:text-4xl font-normal mb-10 text-left">Distributed Automation</h2>
-            <p class="mx-auto mb-10"></p>
-            <p class="mx-auto mb-10"></p>
-            <p class="mx-auto mb-10"></p>
-            <p class="mx-auto mb-10"></p>
-          </div>
-        </div>
+  <ContentRightSection
+    name="applications-engineering"
+    id="ApplicationsEngineering"
+    image="solar-blur-bg.webp"
+    title="Applications Engineering"
+    contentBgColor="bg-gray-200"
+    >
+    <p class="mx-auto my-10">
+      Our highly qualified applications engineers are experts in the application of fiber optic media, cables, connectors, and hardware. No matter how complex or challenging your requirements, our team can develop a custom solution that's reliable, mitigates risk, and helps speed up project implementation schedules. SCADA Solutions' engineers are skilled at designing the most advanced single- and multi-mode cable assemblies, guaranteeing to meet even the most stringent connector and cable specifications. We work with you to solve cable-related problems and help lower project costs by facilitating creative solutions.
+    </p>
+  </ContentRightSection>
 
-      </div>
+  <ContentFullSection
+    name="fiber-optic-solutions"
+    id="FiberOpticSolutions"
+    image="solar-blur-bg.webp"
+    title="Fiber Optic Termination"
+    contentClasses="text-left text-white"
+    >
+    <p class="mx-auto my-10">
+      SCADA Solutions is a leader in the application of cutting-edge fiber optic terminations and splicing methods. No matter the number or complexity of your fiber optic terminations, our Applications Specialists can help you select the right component for each step in the termination and assembly process.
+    </p>
+    <p class="mx-auto my-10">
+      Customers have confidence that every assembly has been manufactured to your exact specifications using brand-name products. They know that every assembly has been fully tested to international industry standards before it leaves our door. Our streamlined work order system, audited under the ISO 9001:2000 standards, ensures that each project is completed on time and as specified.
+    </p>
+    <p class="mx-auto my-10">
+      Available in any length, on spools when applicable<br />
+      <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> 1-288 fiber cable in single-mode and multi-mode<br />
+      <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Choose your connector type or combination<br />
+      Cable is available from industry-leading manufacturers<br />
+    </p>q
+  </ContentFullSection>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 align-top">
-
-        <div class="w-auto mx-10">
-          <div class="my-5">
-            <h4 class="headline text-xl font-bold mb-5 mt-10 text-blue-400">Automation</h4>
-            <p class="mx-auto mb-10">WindCapture&trade; offers an unprecedented level of automation. Automated curtailment easily handles curtailment setpoints from the power-outtaker, or CAISO, and allows operators to define which turbines, or groups of turbines, will be curtailed. Turbines are shut down or brought on-line to match the curtailment setpoint as the wind changes. Autorun modules allow operators to define when turbines run based on environmental conditions such as wind direction, wind speed, time of day, and turbine-specific setpoints like hydraulic, gear, or bearing temperatures. Market reactive modules allow operators to set curtailment points based on real-time or next-interval market pricing from CAISO. Gain some peace of mind knowing that your profits won't disappear during negative pricing events.</p>
-
-            <h4 class="headline text-xl font-bold mb-5 mt-10 text-blue-400">Advanced GUI</h4>
-            <p class="mx-auto mb-10">It is essential for operators of wind farms to have an advanced graphic user interface (GUI) that displays accurate data in real-time. WindCapture&trade; offers complete form-based GUI software that is remotely accessible and easily navigated by authorized operators. The GUI displays all of the monitoring sensors from a particular project or farm, with detailed information on each turbine. This advanced system also allows the authorized user to dynamically change parameters that may change, such as fault detection values of wind speed or the maintenance schedule for a particular pole.</p>
-          </div>
-        </div>
-
-        <div class="w-auto mx-10">
-          <div class="my-5">
-            <h4 class="headline text-xl font-bold mb-5 mt-10 text-blue-400">Remote Access Capabilities</h4>
-            <p class="mx-auto mb-10">Enormous growth in the shear number of turbines per project, not to mention the vast territory where any one field may reside, has made remote access capabilities far more than just a convenience. Efficiencies are needed in detecting, analyzing, and solving the every-day problems encountered on wind farms that prohibit production and decrease productivity.</p>
-            <p class="mx-auto mb-10">SCADA Solutions solves these challenges by utilizing a technology platform that supports data reporting, alarms, and status updates to operators via the web, SMS, e-mail, or even remotely by supporting mobile platforms such as iOS and Android. Turbines are now being reset from the central office or from your living room. Fault codes can be sent to your maintenance crew's cell phones with detailed error detection information. Meter reading and predictive maintenance scheduling are now being done miles away from the pole. Information accessibility has become increasingly vital to the operations, productivity, and maintenance of wind projects.</p>
-            <p class="mx-auto mb-10">WindCapture&trade; represents a complete windfarm computer monitoring and control system for almost any turbine. Each and every system is customized to your specific needs by our engineers and meets the most demanding requirements. Its open architecture allows for easy troubleshooting, upgrades, and internal modifications and advancements. To learn more about its advantages and how WindCapture&trade; can support, improve, and assist you in better managing your wind assets, please contact one of our solutions experts.</p>
-          </div>
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </section>
+  <ContentRightSection
+    name="harsh-environments"
+    id="HarshEnvironments"
+    image="solar-blur-bg.webp"
+    title="Harsh Environment Assemblies"
+    buttonText="Request Service"
+    contentBgColor="bg-white/90"
+    >
+    <p class="mx-auto my-10">
+      Harsh Environment Assemblies Mil-qualified assemblies are built to withstand the demands of the most rigorous environments and applications. These assemblies are ideal for any application where standard assemblies would be damaged by chemical, environmental, or physical stresses. Available features include hybrid assemblies, copper/fiber combinations, and multimode and single mode termini. Request these series and more:
+    </p>
+    <p>
+      <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Hermaphroditic connectors for conditions where end-to-end connector flexibility is necessary<br />
+      M28876 is designed for shipboard and ship-to-shore applications<br />
+      D38999 is designed for tactical or industrial applications<br />
+      Mil Spec ST-QPL Military ST fiber optic connector
+    </p>
+  </ContentRightSection>
 
 </template>
 

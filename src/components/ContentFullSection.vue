@@ -24,6 +24,11 @@
       type: String,
       required: false,
     },
+    contentClasses: {
+      type: String,
+      required: false,
+      default: 'text-center text-white',
+    },
   });
 </script>
 <template>
@@ -36,11 +41,11 @@
       <div class="h-full w-full backdrop-brightness-60 m-0">
         <div class="w-auto">
           <div :class="`container mx-auto px-5 md:px-40 ${props.name}-container py-25`">
-            <div class="text-center">
-              <h2 class="headline text-3xl font-normal mb-10 text-white text-center">{{ props.title }}</h2>
-              <p class="mx-auto text-white">
-                <slot />
-              </p>
+            <div :class="props.contentClasses">
+              <h2 class="headline text-3xl font-normal mb-10">{{ props.title }}</h2>
+
+              <slot />
+
               <div class="mx-auto my-5" v-if="props.button">
                 <ContactButton :buttonText="props.buttonText" />
               </div>

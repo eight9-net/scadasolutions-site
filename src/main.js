@@ -11,12 +11,16 @@ import {
   faPhone,
   faEnvelope,
   faTimes,
+  faCircle,
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
   faBars,
   faPhone,
   faEnvelope,
   faTimes,
+  faCircle,
+  faChevronRight,
 );
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 library.add(

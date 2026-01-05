@@ -46,9 +46,9 @@
 
               <div class="flex-1 px-10 py-15" :class="props.contentBgColor">
                 <h2 class="headline text-3xl font-normal mb-10 text-left">{{ props.title }}</h2>
-                <p class="mx-auto">
+
                   <slot />
-                </p>
+
                 <div class="mx-auto mb-10 my-5">
                   <ContactButton :buttonText="props.buttonText" />
                 </div>
