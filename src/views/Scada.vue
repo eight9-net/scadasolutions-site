@@ -110,6 +110,7 @@
         title=""
         :button="false"
         containerClasses="container mx-auto px-5 md:px-10 py-5"
+        backdropClasses=""
       >
         <Gallery :images="[
           { src: 'PLWTP+AerialLo-1920w.webp', alt: 'SCADA Water Treatment 1' },
@@ -118,6 +119,10 @@
           { src: 'basinsLo-1920w.webp', alt: 'SCADA Water Treatment 4' },
         ]" cols="4" />
       </ContentFullSection>
+
+      <div>
+        <img :src="$getImageUrl('SmartIndustryArticle-1920w.webp')" alt="Smart Industry Article" class="mx-auto my-10 w-full h-auto max-w-4xl" />
+      </div>
 
     </div>
 

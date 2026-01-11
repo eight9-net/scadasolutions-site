@@ -32,7 +32,12 @@
     contentClasses: {
       type: String,
       required: false,
-      default: 'text-center text-white backdrop-brightness-60',
+      default: 'text-center text-white',
+    },
+    backdropClasses: {
+      type: String,
+      required: false,
+      default: 'backdrop-brightness-60',
     },
     containerClasses: {
       type: String,
@@ -67,7 +72,7 @@
       :style="bgStyleComputed"
     >
       <div class="h-full w-full m-0">
-        <div class="w-auto backdrop-brightness-60">
+        <div class="w-auto" :class="props.backdropClasses">
           <div :class="`${props.containerClasses} ${props.name}-container`">
             <div :class="props.contentClasses">
               <h2 class="headline text-3xl font-normal mb-10" v-if="props.title">{{ props.title }}</h2>
