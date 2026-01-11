@@ -66,7 +66,7 @@ import ProductsHero from '../components/PageHero.vue';
       <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> 1-288 fiber cable in single-mode and multi-mode<br />
       <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Choose your connector type or combination<br />
       Cable is available from industry-leading manufacturers<br />
-    </p>q
+    </p>
   </ContentFullSection>
 
   <ContentRightSection

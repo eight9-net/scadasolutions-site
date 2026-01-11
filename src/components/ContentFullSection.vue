@@ -1,4 +1,5 @@
 <script setup>
+  import { computed } from 'vue';
   const props = defineProps({
     name: {
       type: String,
@@ -24,30 +25,58 @@
       type: String,
       required: false,
     },
+    buttonRoute: {
+      type: String,
+      required: false,
+    },
     contentClasses: {
       type: String,
       required: false,
-      default: 'text-center text-white',
+      default: 'text-center text-white backdrop-brightness-60',
+    },
+    containerClasses: {
+      type: String,
+      required: false,
+      default: 'container mx-auto px-5 md:px-40 py-25',
+    },
+    bgClasses: {
+      type: String,
+      required: false,
+      default: 'fixed-bg',
     },
   });
+
+  const getImageUrl = (filename) => {
+    return new URL(`/public/images/${filename}`, import.meta.url).href;
+  }
+
+  const bgStyleComputed = computed(() => {
+    return props.image ? `background-image: url(${getImageUrl(props.image)});` : '';
+  });
+
+  const bgClassesComputed = computed(() => {
+    return props.image ? `${props.bgClasses}` : '';
+  });
+
 </script>
 <template>
   <section :class="`${props.name}-section my-10 pt-10`">
     <div class="scroll-target" :id="props.id">&nbsp;</div>
     <div
-      class="service-and-support-container fixed-bg"
-      :style="`background-image: url(${$getImageUrl(props.image)});`"
+      :class="bgClassesComputed"
+      :style="bgStyleComputed"
     >
-      <div class="h-full w-full backdrop-brightness-60 m-0">
-        <div class="w-auto">
-          <div :class="`container mx-auto px-5 md:px-40 ${props.name}-container py-25`">
+      <div class="h-full w-full m-0">
+        <div class="w-auto backdrop-brightness-60">
+          <div :class="`${props.containerClasses} ${props.name}-container`">
             <div :class="props.contentClasses">
-              <h2 class="headline text-3xl font-normal mb-10">{{ props.title }}</h2>
+              <h2 class="headline text-3xl font-normal mb-10" v-if="props.title">{{ props.title }}</h2>
 
               <slot />
 
               <div class="mx-auto my-5" v-if="props.button">
-                <ContactButton :buttonText="props.buttonText" />
+                <ContactButton :buttonText="props.buttonText" v-if="!props.buttonRoute" />
+                <button class="btn btn-primary" v-if="props.buttonRoute" :onclick="`window.location.href='${props.buttonRoute}'`">{{ props.buttonText }}</button>
               </div>
             </div>
           </div>

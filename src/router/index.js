@@ -72,6 +72,12 @@ const routes = [
         name: 'news',
         component: News
       },
+      {
+        path: 'sample',
+        name: 'sample',
+        // Lazy-loaded route
+        component: () => import('../views/Sample.vue')
+      }
     ]
   }
 ];

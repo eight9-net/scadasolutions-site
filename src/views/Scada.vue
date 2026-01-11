@@ -1,7 +1,14 @@
 <script setup>
-import ProductsHero from '../components/PageHero.vue';
-import Gallery from '../components/Gallery.vue';
+  import { ref } from 'vue';
+  import ProductsHero from '../components/PageHero.vue';
+  import Gallery from '../components/Gallery.vue';
+  import ContentFullSection from '../components/ContentFullSection.vue';
+  import ContentLeftSection from '../components/ContentLeftSection.vue';
 
+  const fileUrl = (filename) => {
+    return new URL(`/public/files/${filename}`, import.meta.url).href;
+  }
+  const lalamiloPdfRef = ref(fileUrl('Lala_Presentation.pptx'));
 
 </script>
 
@@ -67,6 +74,50 @@ import Gallery from '../components/Gallery.vue';
 
       </div>
 
+      <ContentFullSection
+        name="scada-projects"
+        id="ScadaProjects"
+        image="MixingWindWater-2880w.webp"
+        bgClasses="bg-cover bg-contain"
+        contentClasses="text-center text-black bg-white/55 p-5"
+        title="Take a Look at our Projects"
+        buttonText="Download to Learn More"
+        :buttonRoute="lalamiloPdfRef"
+      >
+        <h1 class="headline text-2xl font-normal mb-10 text-center uppercase">Lalamilo Wind Farm</h1>
+        <p class="mx-auto mb-5">The Lalamilo Wind Farm integrates the Wind Energy produced on site to meet the power requirements needed to operate and monitor the various Department of Water Supply resources in the area.</p>
+        <p class="mx-auto mb-10">These systems are uniquely specialized and are comprised of two independent SCADA (Supervisory Control And Data Acquisition) systems working in parallel while communicating and sharing data to achieve maximum efficiency. </p>
+      </ContentFullSection>
+
+      <ContentLeftSection
+        name="scada-water-treatment"
+        id="ScadaWaterTreatment"
+        image="WaterTreatment-1920w.webp"
+        imageClass="w-full min-w-[600px] h-auto"
+        title="Advanced Water Treatment"
+        buttonText="Get in Touch"
+        bgClasses="bg-cover bg-contain"
+      >
+        <p class="mx-auto my-10">
+          Discover the power of SCADA systems, pivotal in enhancing water treatment processes through comprehensive real-time monitoring, precise control, insightful data analysis, and effective alert management. These advanced systems are designed to ensure unparalleled water quality and operational efficiency, safeguarding our most vital resource.
+        </p>
+      </ContentLeftSection>
+
+      <ContentFullSection
+        name="scada-projects"
+        id="ScadaProjects"
+        image=""
+        title=""
+        :button="false"
+        containerClasses="container mx-auto px-5 md:px-10 py-5"
+      >
+        <Gallery :images="[
+          { src: 'PLWTP+AerialLo-1920w.webp', alt: 'SCADA Water Treatment 1' },
+          { src: 'Water Treatment 3.jpg', alt: 'SCADA Water Treatment 2' },
+          { src: 'Education_WWTrtmt-1920w.webp', alt: 'SCADA Water Treatment 3' },
+          { src: 'basinsLo-1920w.webp', alt: 'SCADA Water Treatment 4' },
+        ]" cols="4" />
+      </ContentFullSection>
 
     </div>
 

@@ -7,10 +7,11 @@ import { computed } from 'vue';
 
 <template>
   <footer class="footer-section">
+    <div class="w-full flex items-center justify-center bg-blue-400 m-0">
+      <h2 class="text-1xl text-white p-2">Control Systems Integration</h2>
+    </div>
+
     <div class="container w-full md:mx-auto">
-      <div class="w-full flex items-center justify-center bg-blue-400 m-0">
-        <h2 class="text-1xl text-white p-2">Control Systems Integration</h2>
-      </div>
       <div class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
 
         <div class="w-full md:w-1/3 text-center">
