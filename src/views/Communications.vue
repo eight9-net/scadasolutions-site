@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ContentFullSection from '../components/ContentFullSection.vue';
 import ContentLeftSection from '../components/ContentLeftSection.vue';
 import ContentRightSection from '../components/ContentRightSection.vue';
-import ProductsHero from '../components/PageHero.vue';
+import PageHero from '../components/PageHero.vue';
 
 
 </script>
@@ -13,7 +13,7 @@ import ProductsHero from '../components/PageHero.vue';
 </style>
 
 <template>
-  <ProductsHero title="Communications" />
+  <PageHero title="Communications" />
 
   <ContentLeftSection
     name="distributed-automation"
@@ -21,7 +21,7 @@ import ProductsHero from '../components/PageHero.vue';
     image="solar-blur-bg.webp"
     title="Distributed Automation"
     contentBgColor="bg-white/90"
-    >
+  >
     <p class="mx-auto my-10">
       SCADA Solutions has teamed with communications innovator Landis+Gyr, a worldwide leader in electricity metering and energy management, to integrate advanced radio technologies into the wind industry.
     </p>
@@ -42,7 +42,7 @@ import ProductsHero from '../components/PageHero.vue';
     image="solar-blur-bg.webp"
     title="Applications Engineering"
     contentBgColor="bg-gray-200"
-    >
+  >
     <p class="mx-auto my-10">
       Our highly qualified applications engineers are experts in the application of fiber optic media, cables, connectors, and hardware. No matter how complex or challenging your requirements, our team can develop a custom solution that's reliable, mitigates risk, and helps speed up project implementation schedules. SCADA Solutions' engineers are skilled at designing the most advanced single- and multi-mode cable assemblies, guaranteeing to meet even the most stringent connector and cable specifications. We work with you to solve cable-related problems and help lower project costs by facilitating creative solutions.
     </p>
@@ -54,7 +54,8 @@ import ProductsHero from '../components/PageHero.vue';
     image="solar-blur-bg.webp"
     title="Fiber Optic Termination"
     contentClasses="text-left text-white"
-    >
+    bgClasses="bg-cover bg-contain"
+  >
     <p class="mx-auto my-10">
       SCADA Solutions is a leader in the application of cutting-edge fiber optic terminations and splicing methods. No matter the number or complexity of your fiber optic terminations, our Applications Specialists can help you select the right component for each step in the termination and assembly process.
     </p>
@@ -76,7 +77,7 @@ import ProductsHero from '../components/PageHero.vue';
     title="Harsh Environment Assemblies"
     buttonText="Request Service"
     contentBgColor="bg-white/90"
-    >
+  >
     <p class="mx-auto my-10">
       Harsh Environment Assemblies Mil-qualified assemblies are built to withstand the demands of the most rigorous environments and applications. These assemblies are ideal for any application where standard assemblies would be damaged by chemical, environmental, or physical stresses. Available features include hybrid assemblies, copper/fiber combinations, and multimode and single mode termini. Request these series and more:
     </p>

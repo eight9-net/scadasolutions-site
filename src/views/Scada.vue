@@ -1,6 +1,6 @@
 <script setup>
   import { ref } from 'vue';
-  import ProductsHero from '../components/PageHero.vue';
+  import PageHero from '../components/PageHero.vue';
   import Gallery from '../components/Gallery.vue';
   import ContentFullSection from '../components/ContentFullSection.vue';
   import ContentLeftSection from '../components/ContentLeftSection.vue';
@@ -17,7 +17,7 @@
 </style>
 
 <template>
-  <ProductsHero title="SCADA" />
+  <PageHero title="SCADA" />
 
   <section class="scada-section my-10 pt-10">
     <div class="scroll-target" id="ScadaSolutions">&nbsp;</div>
