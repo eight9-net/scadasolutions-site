@@ -1,6 +1,7 @@
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { ref } from 'vue';
+import { useGetImageUrl } from '../composables/utils';
 
 const props = defineProps({
   images: {
@@ -17,9 +18,14 @@ const isModalOpen = ref(false);
 const currentFullSrc = ref('');
 const currentAlt = ref('');
 
-const openModal = (src, alt) => {
-  currentFullSrc.value = src;
-  currentAlt.value = alt;
+const handleClick = (img) => {
+  const url = img.url ? img.url : null;
+  if (url) {
+    window.open(url, '_blank');
+    return;;
+  }
+  currentFullSrc.value = img.src;
+  currentAlt.value = img.alt;
   isModalOpen.value = true;
   document.body.style.overflow = 'hidden';
 };
@@ -38,33 +44,33 @@ const closeModal = () => {
       <div
         v-for="(image, index) in props.images"
         :key="index"
-        @click="openModal(image.src, image.alt)"
-        class="cursor-pointer overflow-hidden rounded-lg shadow-lg hover:opacity-75 transition duration-300 flex-1 m-2"
+        @click="handleClick(image)"
+        class="flex-1 m-2 overflow-hidden transition duration-300 rounded-lg shadow-lg cursor-pointer hover:opacity-75"
       >
         <img
-          :src="$getImageUrl(image.src)"
+          :src="useGetImageUrl(image.src)"
           :alt="image.alt"
-          class="w-full h-full object-cover"
+          class="object-cover w-full h-full"
         />
       </div>
     </div>
 
     <div
       v-if="isModalOpen"
-      class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75"
       @click.self="closeModal"
     >
       <div class="relative max-w-3xl max-h-full overflow-auto">
         <button
           @click="closeModal"
-          class="absolute top-4 right-4 text-white text-3xl font-bold p-2 bg-gray-800 rounded-full hover:bg-gray-700 border border-white cursor-pointer"
+          class="absolute p-2 text-3xl font-bold text-white bg-gray-800 border border-white rounded-full cursor-pointer top-4 right-4 hover:bg-gray-700"
         >
           <FontAwesomeIcon :icon="['fa', 'times']" />
         </button>
         <img
-          :src="$getImageUrl(currentFullSrc)"
+          :src="useGetImageUrl(currentFullSrc)"
           :alt="currentAlt"
-          class="max-w-full max-h-screen object-contain"
+          class="object-contain max-w-full max-h-screen"
         />
       </div>
     </div>

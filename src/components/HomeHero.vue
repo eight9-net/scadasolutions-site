@@ -1,5 +1,6 @@
 <script setup>
   import { ref, computed, onMounted, onUnmounted } from 'vue';
+  import { useGetImageUrl } from '../composables/utils';
 
   const heroImagesRef = [
     'hero-bg-1.webp',
@@ -32,7 +33,7 @@
 <template>
   <section class="hero">
     <div
-      class="hero min-h-screen relative h-screen w-full overflow-hidden"
+      class="relative w-full h-screen min-h-screen overflow-hidden hero"
       
     >
       <Transition name="fade"
@@ -43,16 +44,16 @@
       >
         <div
           :key="currentHeroImageComputed"
-          class="hero-overlay absolute inset-0 bg-cover bg-center"
-          :style="`background-image: url(${$getImageUrl(currentHeroImageComputed)});`"
+          class="absolute inset-0 bg-center bg-cover hero-overlay"
+          :style="`background-image: url(${useGetImageUrl(currentHeroImageComputed)});`"
         ></div>
       </Transition>
       <div class="absolute inset-0 bg-black opacity-40"></div>
 
-      <div class="hero-content text-neutral-content text-center">
-        <div class="w-full mx-auto max-w-4xl">
-          <h1 class="headline uppercase mb-5 text-3xl md:text-5xl font-normal">Streamlined Integration Solutions for Industrial Automation</h1>
-          <div class="headline mb-5 text-2xl my-6 font-light">
+      <div class="text-center hero-content text-neutral-content">
+        <div class="w-full max-w-4xl mx-auto">
+          <h1 class="mb-5 text-3xl font-normal uppercase headline md:text-5xl">Streamlined Integration Solutions for Industrial Automation</h1>
+          <div class="my-6 mb-5 text-2xl font-light headline">
             Control Systems Integration Services | Irvine
           </div>
           <ContactButton classes="btn btn-soft btn-primary btn-lg my-4 border border-2 border-primary" />

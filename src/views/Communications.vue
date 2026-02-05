@@ -8,9 +8,6 @@ import PageHero from '../components/PageHero.vue';
 
 </script>
 
-<style scoped>
-
-</style>
 
 <template>
   <PageHero title="Communications" />

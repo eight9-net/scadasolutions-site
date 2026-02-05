@@ -1,5 +1,6 @@
 <script setup>
   import { computed } from 'vue';
+  import { useGetImageUrl } from '../composables/utils';
   const props = defineProps({
     name: {
       type: String,
@@ -51,12 +52,8 @@
     },
   });
 
-  const getImageUrl = (filename) => {
-    return new URL(`/public/images/${filename}`, import.meta.url).href;
-  }
-
   const bgStyleComputed = computed(() => {
-    return props.image ? `background-image: url(${getImageUrl(props.image)});` : '';
+    return props.image ? `background-image: url(${useGetImageUrl(props.image)});` : '';
   });
 
   const bgClassesComputed = computed(() => {
@@ -71,11 +68,11 @@
       :class="bgClassesComputed"
       :style="bgStyleComputed"
     >
-      <div class="h-full w-full m-0">
+      <div class="w-full h-full m-0">
         <div class="w-auto" :class="props.backdropClasses">
           <div :class="`${props.containerClasses} ${props.name}-container`">
             <div :class="props.contentClasses">
-              <h2 class="headline text-3xl font-normal mb-10" v-if="props.title">{{ props.title }}</h2>
+              <h2 class="mb-10 text-3xl font-normal headline" v-if="props.title">{{ props.title }}</h2>
 
               <slot />
 

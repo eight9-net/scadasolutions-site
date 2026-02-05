@@ -1,4 +1,5 @@
 <script setup>
+  import { useGetImageUrl } from '../composables/utils';
   const props = defineProps({
     image: {
       type: String,
@@ -26,17 +27,17 @@
       class="hero min-h-[640px] w-screen relative w-full overflow-hidden"
     >
       <div
-        class="hero-overlay absolute inset-0 bg-cover bg-center bg-fixed"
-        :style="`background-image: url(${$getImageUrl(props.image)});`"
+        class="absolute inset-0 bg-fixed bg-center bg-cover hero-overlay"
+        :style="`background-image: url(${useGetImageUrl(props.image)});`"
       ></div>
       <div class="absolute inset-0 bg-black opacity-40"></div>
 
-      <div class="hero-content text-neutral-content text-center">
-        <div class="w-full mx-auto max-w-4xl">
-          <h1 class="headline uppercase mb-10 text-3xl md:text-5xl font-normal">
+      <div class="text-center hero-content text-neutral-content">
+        <div class="w-full max-w-4xl mx-auto">
+          <h1 class="mb-10 text-3xl font-normal uppercase headline md:text-5xl">
             {{ props.title }}
           </h1>
-          <div class="headline mb-5 text-2xl my-6 font-light">
+          <div class="my-6 mb-5 text-2xl font-light headline">
             {{ props.subtitle }}
           </div>
           <ContactButton classes="btn btn-soft btn-primary btn-lg my-4 border border-2 border-primary" />

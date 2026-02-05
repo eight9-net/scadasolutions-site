@@ -40,9 +40,9 @@ const links = shallowRef({
     { name: 'requestaquote', title: 'Request a Quote' },
   ],
   company: [
-    { name: 'company', hash: '#profile', title: 'Company Profile' },
-    { name: 'company', hash: '#partners', title: 'Partners and Affiliations' },
-    { name: 'company', hash: '#privacy', title: 'Privacy' },
+    { name: 'company', title: 'Company Profile' },
+    { name: 'company', hash: '#Partners', title: 'Partners and Affiliations' },
+    { name: 'company', hash: '#Privacy', title: 'Privacy' },
   ],
   windpower: [
     { name: 'windenergytutorial', title: 'Wind Energy Tutorial' },

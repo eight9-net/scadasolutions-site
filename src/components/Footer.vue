@@ -1,31 +1,32 @@
 <script setup>
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { computed } from 'vue';
+  import { computed } from 'vue';
+  import { useGetImageUrl } from '../composables/utils';
 
   const currentYear = computed(() => new Date().getFullYear());
 </script>
 
 <template>
   <footer class="footer-section">
-    <div class="w-full flex items-center justify-center bg-blue-400 m-0">
-      <h2 class="text-1xl text-white p-2">Control Systems Integration</h2>
+    <div class="flex items-center justify-center w-full m-0 bg-blue-400">
+      <h2 class="p-2 text-white text-1xl">Control Systems Integration</h2>
     </div>
 
     <div class="container w-full md:mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
+      <div class="flex flex-col items-center justify-between space-y-8 md:flex-row md:items-start md:space-y-0 md:space-x-8">
 
-        <div class="w-full md:w-1/3 text-center">
-            <img class="max-w-[300px] lg:max-w-[350px] mx-auto" :src="$getImageUrl('scada-solutions-logo.png')" />
-          <p class="copyright my-10 text-xs">&copy; {{ currentYear}} All Rights Reserved | SCADA Solutions, Inc.</p>
+        <div class="w-full text-center md:w-1/3">
+            <img class="max-w-[300px] lg:max-w-[350px] mx-auto" :src="useGetImageUrl('scada-solutions-logo.png')" />
+          <p class="my-10 text-xs copyright">&copy; {{ currentYear}} All Rights Reserved | SCADA Solutions, Inc.</p>
         </div>
-        <div class="w-full md:w-1/3 text-center">
+        <div class="w-full text-center md:w-1/3">
           <h3 class="my-5 font-bold">Registered California DIR Public Works Contractor<br />#949-509-9605</h3>
-          <div class="text-blue-600 text-4xl my-10">
+          <div class="my-10 text-4xl text-blue-600">
             <a href="https://linkedin.com/company/scada-solutions-llc?trk=public_profile_topcard-current-company" alt="Visit us on LinkedIn"><FontAwesomeIcon :icon="['fab', 'linkedin']" /></a>
           </div>
         </div>
-        <div class="w-full md:w-1/3 text-center">
-          <h2 class="headline m-5 text-3xl font-normal">Contact Information</h2>
+        <div class="w-full text-center md:w-1/3">
+          <h2 class="m-5 text-3xl font-normal headline">Contact Information</h2>
           <ul>
             <li class="my-5">
               <FontAwesomeIcon :icon="['fa', 'phone']" />

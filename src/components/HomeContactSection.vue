@@ -1,36 +1,37 @@
 <script setup>
   import { ref } from 'vue';
+  import { useGetImageUrl } from '../composables/utils';
   import HomeContactForm from './HomeContactForm.vue';
 
 </script>
 
 <template>
 
-  <section class="contact-us-section my-10 pt-10">
+  <section class="pt-10 my-10 contact-us-section">
     <div class="scroll-target" id="ContactUs">&nbsp;</div>
     <div
-      class="contact-us-container bg-cover bg-center"
-      :style="`background-image: url(${$getImageUrl('turbines-blue-bg.webp')});`"
+      class="bg-center bg-cover contact-us-container"
+      :style="`background-image: url(${useGetImageUrl('turbines-blue-bg.webp')});`"
     >
-      <div class="h-full w-full backdrop-brightness-50 text-white m-0">
+      <div class="w-full h-full m-0 text-white backdrop-brightness-50">
         <div class="w-auto">
-          <div class="container mx-auto lg:px-40 faq-container py-25 text-center">
-            <h2 class="headline text-3xl font-normal mb-10 text-white text-center">Contact Us</h2>
-            <div class="my-4 mx-auto px-5 md:px-40">
+          <div class="container mx-auto text-center lg:px-40 faq-container py-25">
+            <h2 class="mb-10 text-3xl font-normal text-center text-white headline">Contact Us</h2>
+            <div class="px-5 mx-auto my-4 md:px-40">
               <p>Call Us</p>
               <p>
                 <FontAwesomeIcon :icon="['fa', 'phone']" />
                 <a href="tel:+19495989605" class="ms-1">949-598-9605</a>
               </p>
             </div>
-            <div class="my-4 mx-auto px-5 md:px-40">
+            <div class="px-5 mx-auto my-4 md:px-40">
               <p>Email Us</p>
               <p>
                 <FontAwesomeIcon :icon="['fa', 'envelope']" />
                 <a href="mailto:info@scadasolutions.com" class="ms-1">info@scadasolutions.com</a>
               </p>
             </div>
-            <p class="my-4 mx-auto px-5 md:px-40">
+            <p class="px-5 mx-auto my-4 md:px-40">
               Enter your information below along with a brief message and your contact details. A member of our team will be in touch with you as soon as possible to schedule a consultation.
             </p>
             <HomeContactForm />
