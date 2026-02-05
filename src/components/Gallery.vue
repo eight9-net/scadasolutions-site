@@ -50,7 +50,7 @@ const closeModal = () => {
         <img
           :src="useGetImageUrl(image.src)"
           :alt="image.alt"
-          class="object-cover w-full h-full"
+          class="w-full h-full"
         />
       </div>
     </div>
@@ -70,7 +70,7 @@ const closeModal = () => {
         <img
           :src="useGetImageUrl(currentFullSrc)"
           :alt="currentAlt"
-          class="object-contain max-w-full max-h-screen"
+          class="max-w-full max-h-screen"
         />
       </div>
     </div>
