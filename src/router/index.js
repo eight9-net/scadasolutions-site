@@ -1,16 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import MainLayout from '../layouts/MainLayout.vue';
 import Home from '../views/Home.vue';
-import Company from '../views/Company.vue';
-import Scada from '../views/Scada.vue';
-import Communications from '../views/Communications.vue';
-import ScopeOfWorkProcess from '../views/ScopeOfWorkProcess.vue';
-import RequestAQuote from '../views/RequestAQuote.vue';
-import WindEnergyTutorial from '../views/WindEnergyTutorial.vue';
-import WindFacts from '../views/WindFacts.vue';
-import Glossary from '../views/Glossary.vue';
-import News from '../views/News.vue';
-import Careers from '../views/Careers.vue';
 
 const routes = [
   {
@@ -25,57 +15,56 @@ const routes = [
       {
         path: 'company',
         name: 'company',
-        component: Company
+        component: () => import('../views/Company.vue')
       },
       {
         path: 'scada',
         name: 'scada',
-        component: Scada
+        component: () => import('../views/Scada.vue')
       },
       {
         path: 'communications',
         name: 'communications',
-        component: Communications
+        component: () => import('../views/Communications.vue')
       },
       {
         path: 'scope-of-work-process',
         name: 'scopeofworkprocess',
-        component: ScopeOfWorkProcess
+        component: () => import('../views/ScopeOfWorkProcess.vue')
       },
       {
         path: 'request-a-quote',
         name: 'requestaquote',
-        component: RequestAQuote
+        component: () => import('../views/RequestAQuote.vue')
       },
       {
         path: 'wind-energy-tutorial',
         name: 'windenergytutorial',
-        component: WindEnergyTutorial
+        component: () => import('../views/WindEnergyTutorial.vue')
       },
       {
         path: 'wind-facts',
         name: 'windfacts',
-        component: WindFacts
+        component: () => import('../views/WindFacts.vue')
       },
       {
         path: 'glossary',
         name: 'glossary',
-        component: Glossary
+        component: () => import('../views/Glossary.vue')
       },
       {
         path: 'careers',
         name: 'careers',
-        component: Careers
+        component: () => import('../views/Careers.vue')
       },
       {
         path: 'news',
         name: 'news',
-        component: News
+        component: () => import('../views/News.vue')
       },
       {
         path: 'sample',
         name: 'sample',
-        // Lazy-loaded route
         component: () => import('../views/Sample.vue')
       }
     ]
@@ -83,7 +72,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
