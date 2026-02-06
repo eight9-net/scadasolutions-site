@@ -4,9 +4,8 @@ import https from '../https.js';
 export const useContactStore = defineStore('contact', {
   state: () => ({
     loading: false,
-    error: null,
-    success: false,
     form: {
+      honeypot: '',
       first_name: '',
       last_name: '',
       phone: '',
@@ -23,17 +22,13 @@ export const useContactStore = defineStore('contact', {
   actions: {
     async doSendContactForm(request) {
       this.loading = true;
-      this.error = null;
-      this.success = false;
 
       try {
         const response = await https.sendContactForm(request);
-        if (response.status >= 200 && response.status < 300) {
-          this.success = true;
-          return response;
+        if (response.status >= 200 && response.status < 300 && response.data?.MessageId) {
+          return true;
         } else {
-          this.error = response.data?.message || 'Failed to send contact form';
-          return response;
+          return false;
         }
       } catch (err) {
         this.error = err.message || 'An error occurred';
@@ -45,8 +40,6 @@ export const useContactStore = defineStore('contact', {
 
     resetState() {
       this.loading = false;
-      this.error = null;
-      this.success = false;
     },
   },
 });

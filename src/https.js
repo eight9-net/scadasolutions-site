@@ -24,6 +24,7 @@ export default {
         "Content-Type": "application/json"
       }
     };
+    request.app_key = 'scada';
     let response = await axios.post(`https://nmesql59ql.execute-api.us-west-1.amazonaws.com/contactLambda`, request, options);
     return response;
   },

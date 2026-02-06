@@ -5,26 +5,29 @@
 
   const isDisabledRef = ref(false);
   const messageSentRef = ref(false);
+  const messageErrorRef = ref(false);
   const contactStore = useContactStore();
   const form = ref(contactStore.form);
 
   function sendContactForm(data) {
     if (isDisabledRef.value) {
-      return;
+      console.error('Form is disabled...');
+      // return;
     }
+    messageErrorRef.value = false;
     isDisabledRef.value = true;
-    contactStore.doSendContactForm(form.value).then(() => {
-      messageSentRef.value = true;
-      isDisabledRef.value = false;
+    contactStore.doSendContactForm(form.value).then((success) => {
+      messageSentRef.value = success;
     }).catch(() => {
       isDisabledRef.value = false;
+      messageErrorRef.value = true;
     });
   }
 </script>
 
 <template>
   <form @submit.prevent="sendContactForm" class="p-4 fieldset rounded-box text-base-content" novalidate>
-
+    <input type="text" name="honeypot" class="hidden" v-model="form.honeypot" />
     <div class="flex gap-4">
       <fieldset class="fieldset flex-3">
         <label class="w-full input validator">
@@ -147,6 +150,9 @@
 
   <div v-if="messageSentRef" class="p-4 my-4 text-green-800 bg-green-200 border border-green-400 rounded">
     <p>Thank you for contacting us! We have received your message and will get back to you shortly.</p>
+  </div>
+  <div v-if="messageErrorRef" class="p-4 my-4 text-red-800 bg-red-200 border border-red-400 rounded">
+    <p>There was an error sending your message. Please try again or email us directly.</p>
   </div>
 
 </template>
