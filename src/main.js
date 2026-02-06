@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import './style.scss';
 import App from './App.vue';
 import router from './router';
@@ -28,6 +29,8 @@ library.add(
 );
 
 const app = createApp(App);
+const pinia = createPinia();
+app.use(pinia);
 
 // Global Components
 import ContentLeftSection from './components/ContentLeftSection.vue';
