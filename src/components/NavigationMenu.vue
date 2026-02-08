@@ -49,11 +49,7 @@ const links = shallowRef({
     { name: 'windfacts', title: 'Wind Facts' },
     { name: 'glossary', title: 'Glossary' },
   ],
-  news: [
-    { name: 'news', hash: '#latest', title: 'Latest News' },
-    { name: 'news', hash: '#archive', title: 'News Archives' },
-  ],
-  careers: [
+    careers: [
     { name: 'careers', hash: '#NorthAmericanJobs', title: 'North American Jobs' },
     { name: 'careers', hash: '#EuropeanUnionJobs', title: 'European Union Jobs' },
     { name: 'careers', hash: '#PrivacyPolicy', title: 'Applicant Privacy Policy' },
@@ -69,7 +65,6 @@ const links = shallowRef({
     <DropdownMenu title="Products" :links="links.products" :hover="props.hover" :border="props.border" />
     <DropdownMenu title="Company" :links="links.company" :hover="props.hover" :border="props.border" />
     <DropdownMenu title="Wind Power" :links="links.windpower" :hover="props.hover" :border="props.border" />
-    <DropdownMenu title="News" :links="links.news" :hover="props.hover" :border="props.border" />
     <DropdownMenu title="Careers" :links="links.careers" :hover="props.hover" :border="props.border" />
   </ul>
 </template>
