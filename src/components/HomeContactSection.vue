@@ -1,5 +1,4 @@
 <script setup>
-  import { ref } from 'vue';
   import { useGetImageUrl } from '../composables/utils';
   import HomeContactForm from './HomeContactForm.vue';
 

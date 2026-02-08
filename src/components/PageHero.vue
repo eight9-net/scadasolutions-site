@@ -19,6 +19,10 @@
       required: false,
       default: 'Contact Us',
     },
+    button: {
+      type: Boolean,
+      default: true,
+    },
   });
 </script>
 <template>
@@ -40,7 +44,7 @@
           <div class="my-6 mb-5 text-2xl font-light headline">
             {{ props.subtitle }}
           </div>
-          <ContactButton classes="btn btn-soft btn-primary btn-lg my-4 border border-2 border-primary" />
+          <ContactButton v-if="props.button" classes="btn btn-soft btn-primary btn-lg my-4 border border-2 border-primary" />
         </div>
       </div>
     </div>
