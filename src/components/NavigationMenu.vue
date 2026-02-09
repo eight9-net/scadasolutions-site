@@ -49,7 +49,7 @@ const links = shallowRef({
     { name: 'windenergytutorial', hash: '#Facts', title: 'Wind Facts' },
     { name: 'windenergytutorial', hash: '#Glossary', title: 'Glossary' },
   ],
-    careers: [
+  careers: [
     { name: 'careers', hash: '#NorthAmericanJobs', title: 'North American Jobs' },
     { name: 'careers', hash: '#EuropeanUnionJobs', title: 'European Union Jobs' },
     { name: 'careers', hash: '#PrivacyPolicy', title: 'Applicant Privacy Policy' },
@@ -60,12 +60,12 @@ const links = shallowRef({
 
 <template>
   <ul :class="props.classes">
-    <DropdownMenu title="Home" :links="links.home" :hover="props.hover" :border="props.border" />
-    <DropdownMenu title="Services" :links="links.services" :hover="props.hover" :border="props.border" />
-    <DropdownMenu title="Products" :links="links.products" :hover="props.hover" :border="props.border" />
-    <DropdownMenu title="Company" :links="links.company" :hover="props.hover" :border="props.border" />
-    <DropdownMenu title="Wind Power" :links="links.windpower" :hover="props.hover" :border="props.border" />
-    <DropdownMenu title="Careers" :links="links.careers" :hover="props.hover" :border="props.border" />
+    <DropdownMenu title="Home" :links="links.home" :hover="props.hover" :border="props.border" :link="{name: 'home'}" />
+    <DropdownMenu title="Services" :links="links.services" :hover="props.hover" :border="props.border" :link="{name: 'home', hash: '#DesignAndEngineering'}" />
+    <DropdownMenu title="Products" :links="links.products" :hover="props.hover" :border="props.border" :link="{name: 'scada'}" />
+    <DropdownMenu title="Company" :links="links.company" :hover="props.hover" :border="props.border" :link="{name: 'company'}" />
+    <DropdownMenu title="Wind Power" :links="links.windpower" :hover="props.hover" :border="props.border" :link="{name: 'windenergytutorial'}" />
+    <DropdownMenu title="Careers" :links="links.careers" :hover="props.hover" :border="props.border" :link="{name: 'careers'}" />
   </ul>
 </template>
 

@@ -43,16 +43,6 @@ const routes = [
         component: () => import('../views/WindEnergyTutorial.vue')
       },
       {
-        path: 'wind-facts',
-        name: 'windfacts',
-        component: () => import('../views/WindFacts.vue')
-      },
-      {
-        path: 'glossary',
-        name: 'glossary',
-        component: () => import('../views/Glossary.vue')
-      },
-      {
         path: 'careers',
         name: 'careers',
         component: () => import('../views/Careers.vue')
