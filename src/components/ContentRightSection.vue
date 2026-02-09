@@ -18,7 +18,15 @@
       type: String,
       required: true,
     },
+    button: {
+      type: Boolean,
+      default: true,
+    },
     buttonText: {
+      type: String,
+      required: false,
+    },
+    buttonRoute: {
       type: String,
       required: false,
     },
@@ -66,8 +74,9 @@
 
                   <slot />
 
-                <div class="mx-auto my-5 mb-10">
-                  <ContactButton :buttonText="props.buttonText" />
+                <div class="mx-auto my-5 mb-10" v-if="props.button">
+                  <ContactButton :buttonText="props.buttonText" v-if="!props.buttonRoute" />
+                  <button class="btn btn-primary" v-if="props.buttonRoute" :onclick="`window.location.href='${props.buttonRoute}'`">{{ props.buttonText }}</button>
                 </div>
               </div>
 

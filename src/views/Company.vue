@@ -64,18 +64,14 @@ import Gallery from '../components/Gallery.vue';
     <ContentRightSection
       name="privacy-policy"
       id="Privacy"
-      image="solar-blur-bg.webp"
+      image="privacy-policy.jpg"
       title="Privacy"
-      contentClasses="text-left text-black"
-      bgClasses="bg-white bg-bottom"
-      backdropClasses=""
-      containerClasses="container mx-auto px-5"
     >
       <p class="mx-auto my-10">
-        Copyright Information and Privacy Policy: This website and all its contents are copyright SCADA Solutions, Inc. If you believe there are errors or wish to submit general inquiries about the site, please send an email to Webmaster.
+        Copyright Information and Privacy Policy: This website and all its contents are copyright SCADA Solutions, Inc. If you believe there are errors or wish to submit general inquiries about the site, please contact us.
       </p>
       <p class="mx-auto my-10">
-        SCADA Solutions, Inc. is not responsible for content on pages linked to outside our network. We take every precaution to protect your privacy. If you have concerns, questions, or comments about your privacy in your dealings with SCADA Solutions, please email the Webmaster.
+        SCADA Solutions, Inc. is not responsible for content on pages linked to outside our network. We take every precaution to protect your privacy. If you have concerns, questions, or comments about your privacy in your dealings with SCADA Solutions, please contact us.
       </p>
     </ContentRightSection>
 
