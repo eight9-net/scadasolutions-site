@@ -61,8 +61,8 @@ import PageHero from '../components/PageHero.vue';
     </p>
     <p class="mx-auto my-10">
       Available in any length, on spools when applicable<br />
-      <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> 1-288 fiber cable in single-mode and multi-mode<br />
-      <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Choose your connector type or combination<br />
+      <ListItem>1-288 fiber cable in single-mode and multi-mode</ListItem>
+      <ListItem>Choose your connector type or combination</ListItem>
       Cable is available from industry-leading manufacturers<br />
     </p>
   </ContentFullSection>
@@ -79,7 +79,7 @@ import PageHero from '../components/PageHero.vue';
       Harsh Environment Assemblies Mil-qualified assemblies are built to withstand the demands of the most rigorous environments and applications. These assemblies are ideal for any application where standard assemblies would be damaged by chemical, environmental, or physical stresses. Available features include hybrid assemblies, copper/fiber combinations, and multimode and single mode termini. Request these series and more:
     </p>
     <p>
-      <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Hermaphroditic connectors for conditions where end-to-end connector flexibility is necessary<br />
+      <ListItem>Hermaphroditic connectors for conditions where end-to-end connector flexibility is necessary</ListItem>
       M28876 is designed for shipboard and ship-to-shore applications<br />
       D38999 is designed for tactical or industrial applications<br />
       Mil Spec ST-QPL Military ST fiber optic connector

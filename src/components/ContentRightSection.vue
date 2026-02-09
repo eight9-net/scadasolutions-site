@@ -1,4 +1,5 @@
 <script setup>
+  import { computed } from 'vue';
   import { useGetImageUrl } from '../composables/utils';
   const props = defineProps({
     name: {
@@ -25,6 +26,20 @@
       type: String,
       default: '',
     },
+    bgClasses: {
+      type: String,
+      required: false,
+      default: 'bg-cover bg-top',
+    },
+  });
+
+
+  const bgStyleComputed = computed(() => {
+    return props.image ? `background-image: url(${useGetImageUrl(props.image)});` : '';
+  });
+
+  const bgClassesComputed = computed(() => {
+    return props.image ? `${props.bgClasses}` : '';
   });
 </script>
 <template>
@@ -39,8 +54,9 @@
             <div class="flex">
 
               <div
-                class="flex-1 bg-top bg-cover"
-                :style="`background-image: url(${useGetImageUrl(props.image)});`"
+                class="flex-1"
+                :class="bgClassesComputed"
+                :style="bgStyleComputed"
               >
                 &nbsp;
               </div>

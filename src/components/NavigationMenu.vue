@@ -46,8 +46,8 @@ const links = shallowRef({
   ],
   windpower: [
     { name: 'windenergytutorial', title: 'Wind Energy Tutorial' },
-    { name: 'windfacts', title: 'Wind Facts' },
-    { name: 'glossary', title: 'Glossary' },
+    { name: 'windenergytutorial', hash: '#Facts', title: 'Wind Facts' },
+    { name: 'windenergytutorial', hash: '#Glossary', title: 'Glossary' },
   ],
     careers: [
     { name: 'careers', hash: '#NorthAmericanJobs', title: 'North American Jobs' },

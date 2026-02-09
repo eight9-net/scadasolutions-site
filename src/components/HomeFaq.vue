@@ -1,7 +1,7 @@
 <script setup>
   import { ref } from 'vue';
   import Accordion from './Accordion.vue';
-import ContentFullSection from './ContentFullSection.vue';
+  import ContentFullSection from './ContentFullSection.vue';
   const faqRef = ref([
     {
       title: 'Why is SCADA Solutions, Inc. so popular?',

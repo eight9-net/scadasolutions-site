@@ -104,11 +104,11 @@ import ProductsHero from '../components/PageHero.vue';
         Our project management program ensures project completion through all phases of research, design, development, construction, and deployment. Our team is always available and covers:
       </p>
       <p class="mx-auto my-10">
-        <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Quality Assurance<br />
-        <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Status Updates<br />
-        <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Integration Support<br />
-        <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Timelines, Budget, and Scope Review<br />
-        <FontAwesomeIcon icon="fa-solid fa-chevron-right" class="text-blue-400 mx-1" /> Communication Planning<br />
+        <ListItem>Quality Assurance</ListItem>
+        <ListItem>Status Updates</ListItem>
+        <ListItem>Integration Support</ListItem>
+        <ListItem>Timelines, Budget, and Scope Review</ListItem>
+        <ListItem>Communication Planning</ListItem>
       </p>
       <p class="mx-auto my-10">
         Our engineering team, management, and staff are confident in our abilities to produce and deliver an economically feasible solution to fully restore and/or upgrade communications and SCADA systems in most situations. If, however, we are unable to provide a solution that meets your needs or challenges, we will offer our experience, expertise, and best efforts to help you find one. Our end goal is to provide the products, services, and resources to help service our clients' requirements and wishes in any manner we can.

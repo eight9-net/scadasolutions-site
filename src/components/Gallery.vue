@@ -11,7 +11,11 @@ const props = defineProps({
   cols: {
     type: String,
     default: '2',
-  }
+  },
+  labels: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const isModalOpen = ref(false);
@@ -47,11 +51,16 @@ const closeModal = () => {
         @click="handleClick(image)"
         class="flex-1 m-2 overflow-hidden transition duration-300 rounded-lg shadow-lg cursor-pointer hover:opacity-75"
       >
-        <img
-          :src="useGetImageUrl(image.src)"
-          :alt="image.alt"
-          class="w-full h-full"
-        />
+        <div>
+          <img
+            :src="useGetImageUrl(image.src)"
+            :alt="image.alt"
+            class="w-full h-full"
+          />
+        </div>
+        <label v-if="image.alt && props.labels" class="block text-center text-black">
+          {{ image.alt }}
+        </label>
       </div>
     </div>
 
@@ -69,8 +78,7 @@ const closeModal = () => {
         </button>
         <img
           :src="useGetImageUrl(currentFullSrc)"
-          :alt="currentAlt"
-          class="max-w-full max-h-screen"
+          class="max-w-full max-h-screen min-w-[600px] object-contain"
         />
       </div>
     </div>
