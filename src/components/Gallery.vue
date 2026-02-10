@@ -49,7 +49,8 @@ const closeModal = () => {
         v-for="(image, index) in props.images"
         :key="index"
         @click="handleClick(image)"
-        class="flex-1 m-2 overflow-hidden transition duration-300 rounded-lg shadow-lg cursor-pointer hover:opacity-75"
+        class="flex-1 m-2 my-auto overflow-hidden transition duration-300 rounded-lg shadow-lg cursor-pointer hover:opacity-75"
+        style="vertical-align: center;"
       >
         <div>
           <img

@@ -15,9 +15,10 @@ import PageHero from '../components/PageHero.vue';
   <ContentLeftSection
     name="distributed-automation"
     id="DistributedAutomation"
-    image="solar-blur-bg.webp"
+    image="communications.png"
     title="Distributed Automation"
     contentBgColor="bg-white/90"
+    bgClasses="mt-30 mb-30 bg-center bg-no-repeat bg-center max-h-[800px]"
   >
     <p class="mx-auto my-10">
       SCADA Solutions has teamed with communications innovator Landis+Gyr, a worldwide leader in electricity metering and energy management, to integrate advanced radio technologies into the wind industry.
@@ -36,7 +37,7 @@ import PageHero from '../components/PageHero.vue';
   <ContentRightSection
     name="applications-engineering"
     id="ApplicationsEngineering"
-    image="solar-blur-bg.webp"
+    image="fiber-switch.jpg"
     title="Applications Engineering"
     contentBgColor="bg-gray-200"
   >
@@ -48,7 +49,7 @@ import PageHero from '../components/PageHero.vue';
   <ContentFullSection
     name="fiber-optic-solutions"
     id="FiberOpticSolutions"
-    image="solar-blur-bg.webp"
+    image="fiber-optic-bg.jpg"
     title="Fiber Optic Termination"
     contentClasses="text-left text-white"
     bgClasses="bg-cover bg-contain"
@@ -70,7 +71,7 @@ import PageHero from '../components/PageHero.vue';
   <ContentRightSection
     name="harsh-environments"
     id="HarshEnvironments"
-    image="solar-blur-bg.webp"
+    image="power-boxes-solar.jpg"
     title="Harsh Environment Assemblies"
     buttonText="Request Service"
     contentBgColor="bg-white/90"

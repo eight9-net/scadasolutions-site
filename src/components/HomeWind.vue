@@ -3,7 +3,7 @@
 
   <ContentLeftSection
     name="home-wind"
-    id="WindSolutions"
+    id="WindServices"
     image="turbines-clouds.webp"
     title="Empowering Industries with Wind SCADA Solutions"
   >

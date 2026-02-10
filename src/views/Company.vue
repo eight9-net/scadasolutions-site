@@ -52,12 +52,15 @@ import Gallery from '../components/Gallery.vue';
       containerClasses="container mx-auto px-5"
       :button="false"
     >
-      <Gallery :images="[
-        { src: 'awea.webp', alt: 'American Wind Energy Association', url: 'https://www.awea.org/' },
-        { src: 'opto22.svg', alt: 'OPTO 22', url: 'https://www.opto22.com/' },
-        { src: 'landisgyr.webp', alt: 'Landis + Gyr', url: 'https://www.landisgyr.com/' },
-        { src: 'dwpa.webp', alt: 'Danish Wind Power Academy', url: 'https://www.danishwpa.com/' },
-      ]" cols="2" />
+      <Gallery
+        :images="[
+          { src: 'awea.webp', alt: 'American Wind Energy Association', url: 'https://www.awea.org/' },
+          { src: 'opto22.svg', alt: 'OPTO 22', url: 'https://www.opto22.com/' },
+          { src: 'landisgyr.webp', alt: 'Landis + Gyr', url: 'https://www.landisgyr.com/' },
+          { src: 'dwpa.webp', alt: 'Danish Wind Power Academy', url: 'https://www.danishwpa.com/' },
+        ]"
+        cols="2"
+      />
     </ContentFullSection>
 
 
