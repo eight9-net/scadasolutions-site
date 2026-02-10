@@ -1,9 +1,9 @@
 <script setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import ContentFullSection from '../components/ContentFullSection.vue';
-import ContentLeftSection from '../components/ContentLeftSection.vue';
-import ContentRightSection from '../components/ContentRightSection.vue';
-import PageHero from '../components/PageHero.vue';
+  import ContentFullSection from '../components/ContentFullSection.vue';
+  import ContentLeftSection from '../components/ContentLeftSection.vue';
+  import ContentRightSection from '../components/ContentRightSection.vue';
+  import PageHero from '../components/PageHero.vue';
+  import ListItem from '../components/ListItem.vue';
 
 
 </script>
