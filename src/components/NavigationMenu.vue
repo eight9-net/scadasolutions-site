@@ -1,71 +1,76 @@
 <script setup>
-// Header component
-const props = defineProps({
-  classes: {
-    type: String,
-    default: 'menu menu-horizontal px-1 text-lg grid-autoflow justify-center'
-  },
-  hover: {
-    type: Boolean,
-    default: true
-  },
-  border: {
-    type: Boolean,
-    default: true
-  },
-});
-import { shallowRef } from 'vue';
-import DropdownMenu from './DropdownMenu.vue';
+  const props = defineProps({
+    classes: {
+      type: String,
+      default: 'menu menu-horizontal px-1 text-lg grid-autoflow justify-center'
+    },
+    hover: {
+      type: Boolean,
+      default: true
+    },
+    border: {
+      type: Boolean,
+      default: true
+    },
+  });
+  import { shallowRef } from 'vue';
+  import DropdownMenu from './DropdownMenu.vue';
 
 
-const links = shallowRef({
-  home: [
-    { name: 'home', hash: '#Explanation', title: 'Explanation' },
-    { name: 'home', hash: '#ProductOverview', title: 'Product Overview' },
-    { name: 'home', hash: '#FAQs', title: 'FAQs' },
-    { name: 'home', hash: '#ContactUs', title: 'Contact Us' },
-  ],
-  services: [
-    { name: 'home', hash: '#DesignAndEngineering', title: 'Design and Engineering' },
-    { name: 'home', hash: '#ServiceAndSupport', title: 'Service and Support' },
-    { name: 'home', hash: '#Integration', title: 'Integration' },
-    { name: 'home', hash: '#Installation', title: 'Installation' },
-    { name: 'home', hash: '#SolarServices', title: 'Solar Services' },
-    { name: 'home', hash: '#WindServices', title: 'Wind Services' },
-  ],
-  products: [
-    { name: 'scada', title: 'SCADA' },
-    { name: 'communications', title: 'Communications' },
-    { name: 'scopeofworkprocess', title: 'Scope of Work Process' },
-    { name: 'requestaquote', title: 'Request a Quote' },
-  ],
-  company: [
-    { name: 'company', title: 'Company Profile' },
-    { name: 'company', hash: '#Partners', title: 'Partners and Affiliations' },
-    { name: 'company', hash: '#Privacy', title: 'Privacy' },
-  ],
-  windpower: [
-    { name: 'windenergytutorial', title: 'Wind Energy Tutorial' },
-    { name: 'windenergytutorial', hash: '#Facts', title: 'Wind Facts' },
-    { name: 'windenergytutorial', hash: '#Glossary', title: 'Glossary' },
-  ],
-  careers: [
-    { name: 'careers', hash: '#NorthAmericanJobs', title: 'North American Jobs' },
-    { name: 'careers', hash: '#EuropeanUnionJobs', title: 'European Union Jobs' },
-    { name: 'careers', hash: '#PrivacyPolicy', title: 'Applicant Privacy Policy' },
-  ],
-});
+  const links = shallowRef({
+    home: [
+      { name: 'home', hash: '#Explanation', title: 'Explanation' },
+      { name: 'home', hash: '#ProductOverview', title: 'Product Overview' },
+      { name: 'home', hash: '#FAQs', title: 'FAQs' },
+      { name: 'home', hash: '#ContactUs', title: 'Contact Us' },
+    ],
+    services: [
+      { name: 'home', hash: '#DesignAndEngineering', title: 'Design and Engineering' },
+      { name: 'home', hash: '#ServiceAndSupport', title: 'Service and Support' },
+      { name: 'home', hash: '#Integration', title: 'Integration' },
+      { name: 'home', hash: '#Installation', title: 'Installation' },
+      { name: 'home', hash: '#SolarServices', title: 'Solar Services' },
+      { name: 'home', hash: '#WindServices', title: 'Wind Services' },
+    ],
+    products: [
+      { name: 'scada', title: 'SCADA' },
+      { name: 'communications', title: 'Communications' },
+      { name: 'scopeofworkprocess', title: 'Scope of Work Process' },
+      { name: 'requestaquote', title: 'Request a Quote' },
+    ],
+    company: [
+      { name: 'company', title: 'Company Profile' },
+      { name: 'company', hash: '#Partners', title: 'Partners and Affiliations' },
+      { name: 'company', hash: '#Privacy', title: 'Privacy' },
+    ],
+    windpower: [
+      { name: 'windenergytutorial', title: 'Wind Energy Tutorial' },
+      { name: 'windenergytutorial', hash: '#Facts', title: 'Wind Facts' },
+      { name: 'windenergytutorial', hash: '#Glossary', title: 'Glossary' },
+    ],
+    careers: [
+      { name: 'careers', hash: '#NorthAmericanJobs', title: 'North American Jobs' },
+      { name: 'careers', hash: '#EuropeanUnionJobs', title: 'European Union Jobs' },
+      { name: 'careers', hash: '#PrivacyPolicy', title: 'Applicant Privacy Policy' },
+    ],
+  });
 
+  const isHorizontal = shallowRef(props.classes.includes('menu-horizontal'));
+
+  const emit = defineEmits(['emitCloseMenu']);
+  const handleCloseMenu = () => {
+    emit('emitCloseMenu');
+  };
 </script>
 
 <template>
   <ul :class="props.classes">
-    <DropdownMenu title="Home" :links="links.home" :hover="props.hover" :border="props.border" :link="{name: 'home'}" />
-    <DropdownMenu title="Services" :links="links.services" :hover="props.hover" :border="props.border" :link="{name: 'home', hash: '#DesignAndEngineering'}" />
-    <DropdownMenu title="Products" :links="links.products" :hover="props.hover" :border="props.border" :link="{name: 'scada'}" />
-    <DropdownMenu title="Company" :links="links.company" :hover="props.hover" :border="props.border" :link="{name: 'company'}" />
-    <DropdownMenu title="Wind Power" :links="links.windpower" :hover="props.hover" :border="props.border" :link="{name: 'windenergytutorial'}" />
-    <DropdownMenu title="Careers" :links="links.careers" :hover="props.hover" :border="props.border" :link="{name: 'careers'}" />
+    <DropdownMenu title="Home" :links="links.home" :hover="props.hover" :border="props.border" :link="{name: 'home'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
+    <DropdownMenu title="Services" :links="links.services" :hover="props.hover" :border="props.border" :link="{name: 'home', hash: '#DesignAndEngineering'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
+    <DropdownMenu title="Products" :links="links.products" :hover="props.hover" :border="props.border" :link="{name: 'scada'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
+    <DropdownMenu title="Company" :links="links.company" :hover="props.hover" :border="props.border" :link="{name: 'company'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
+    <DropdownMenu title="Wind Power" :links="links.windpower" :hover="props.hover" :border="props.border" :link="{name: 'windenergytutorial'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
+    <DropdownMenu title="Careers" :links="links.careers" :hover="props.hover" :border="props.border" :link="{name: 'careers'}" :isHorizontal="isHorizontal" @emitCloseMenu="handleCloseMenu" />
   </ul>
 </template>
 
