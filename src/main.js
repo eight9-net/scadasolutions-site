@@ -36,8 +36,8 @@ app.use(pinia);
 // Global Variables
 app.config.globalProperties.$companyName = 'SCADA Solutions, Inc.';
 app.config.globalProperties.$contactEmail = 'info@scadasolutions.com';
-app.config.globalProperties.$contactPhone = '+16264703579';
-app.config.globalProperties.$companyLicense = '949-598-9605';
+app.config.globalProperties.$contactPhone = '+19495099605';
+app.config.globalProperties.$companyLicense = '777306';
 
 // Global Components
 import ContentLeftSection from './components/ContentLeftSection.vue';

@@ -4,7 +4,7 @@
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
   import NavigationMenu from './NavigationMenu.vue';
   const isOpen = ref(false);
-  const toggleMobileNav = (foo) => {
+  const toggleMobileNav = () => {
     isOpen.value = !isOpen.value;
   };
   const handleCloseMenu = () => {

@@ -1,4 +1,3 @@
-// import store from '../store';
 import axios from 'axios';
 
 axios.interceptors.response.use(undefined, function (error) {
@@ -28,9 +27,5 @@ export default {
     let response = await axios.post(`https://nmesql59ql.execute-api.us-west-1.amazonaws.com/contactLambda`, request, options);
     return response;
   },
-  // async fetch_products(request) {
-  //   const { data } = await axios.get(`/api/fetch-products`, request);
-  //   return data;
-  // },
 
 }
