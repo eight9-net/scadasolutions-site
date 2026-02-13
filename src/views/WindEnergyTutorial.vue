@@ -144,7 +144,7 @@
             How many turbines does it take to make one megawatt (MW)?
           </h4>
           <p class="mx-auto mb-10">
-            Most manufacturers of utility-scale turbines offer machines in the 700-kW to 2.5-MW range. Ten 700-kW units would make a 7-MW wind plant, while 949-509-9605-MW machines would make a 25-MW facility. In the future, machines of larger size will be available, although they will probably be installed offshore, where larger transportation and construction equipment can be used. Units up to 5 MW in capacity are now under development.
+            Most manufacturers of utility-scale turbines offer machines in the 700-kW to 2.5-MW range. Ten 700-kW units would make a 7-MW wind plant, while ten 2.5MW machines would make a 25-MW facility. In the future, machines of larger size will be available, although they will probably be installed offshore, where larger transportation and construction equipment can be used. Units up to 5 MW in capacity are now under development.
           </p>
 
           <p class="mx-auto mb-10">

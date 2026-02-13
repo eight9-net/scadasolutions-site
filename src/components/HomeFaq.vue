@@ -2,14 +2,25 @@
   import { ref } from 'vue';
   import Accordion from './Accordion.vue';
   import ContentFullSection from './ContentFullSection.vue';
+  import { useFormatPhone } from '../composables/utils';
+  const companyNameRef = ref();
+  const contactPhoneRef = ref();
+  const phoneFormattedRef = ref();
+  const contactEmailRef = ref();
+  const mounted = () => {
+    companyNameRef.value = this.$companyName;
+    contactEmailRef.value = this.$contactEmail;
+    contactPhoneRef.value = this.$contactPhone;
+    phoneFormattedRef.value = useFormatPhone(contactPhoneRef.value);
+  };
   const faqRef = ref([
     {
-      title: 'Why is SCADA Solutions, Inc. so popular?',
+      title: `Why is ${companyNameRef.value} so popular?`,
       content: `
-        <p class="mb-4">At SCADA Solutions, Inc., our popularity is attributed to our unwavering commitment to delivering seamless SCADA solutions for uninterrupted operations, with a particular focus on control system integration.</p>
+        <p class="mb-4">At ${companyNameRef.value}, our popularity is attributed to our unwavering commitment to delivering seamless SCADA solutions for uninterrupted operations, with a particular focus on control system integration.</p>
         <p class="mb-4">Our extensive capabilities in system design engineering, coupled with our experienced and professional installation knowledge, make us stand out in the industry. We excel in communication, automation, and integration, serving all brands of turbines, both old and new. What truly distinguishes us is our tailored design and engineering solutions provided by a team of skilled engineers and designers, specializing in control systems integration. We prioritize unmatched support and service, offering aggressive warranties and immediate responses to system-impacting issues, reinforcing our dedication to control system integration.</p>
         <p class="mb-4">Our expertise in SCADA solution integration and expert installation ensures the successful implementation of network solutions with minimal disruption, emphasizing our proficiency in control systems integration. For those in the solar and windpower industries, we empower projects with comprehensive services, including communication systems, SCADA design, and development, all underscored by our commitment to control system integration. </p>
-        <p class="mb-4">Choose SCADA Solutions, Inc. for reliable, efficient, and industry-leading solutions in control systems integration.</p>
+        <p class="mb-4">Choose ${companyNameRef.value} for reliable, efficient, and industry-leading solutions in control systems integration.</p>
       `,
     },
     {
@@ -35,7 +46,7 @@
     {
       title: 'How do I contact you?',
       content: `
-        <p class="mb-4">You can call us at <a href="tel:+16264703579">626-470-3579</a> or email us at <a href="mailto:sales@scadasolutions.com">sales@scadasolutions.com</a>. You can also use the form on our <a href="/#ContactUs">Contact Us</a> page.</p>
+        <p class="mb-4">You can call us at <a href="tel:${contactPhoneRef.value}">${phoneFormattedRef.value}</a> or email us at <a href="mailto:${contactEmailRef.value}">${contactEmailRef.value}</a>. You can also use the form on our <a href="/#ContactUs">Contact Us</a> page.</p>
       `,
     },
   ]);

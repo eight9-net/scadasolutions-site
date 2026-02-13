@@ -198,7 +198,7 @@
     <p>Thank you for contacting us! We have received your message and will get back to you shortly.</p>
   </div>
   <div v-if="messageErrorRef" class="p-4 my-4 text-red-800 bg-red-200 border border-red-400 rounded">
-    <p>There was an error sending your message. Please try again or email us directly at <a href="mailto:info@scadasolutions.com?subject=Request%20A%20Quote">info@scadasolutions.com</a>.</p>
+    <p>There was an error sending your message. Please try again or email us directly at <a :href="`mailto:${$contactEmail}?subject=Request%20A%20Quote`">{{ $contactEmail }}</a>.</p>
   </div>
 
 </template>

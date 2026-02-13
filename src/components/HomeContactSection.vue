@@ -1,5 +1,5 @@
 <script setup>
-  import { useGetImageUrl } from '../composables/utils';
+  import { useGetImageUrl, useFormatPhone } from '../composables/utils';
   import HomeContactForm from './HomeContactForm.vue';
 
 </script>
@@ -20,14 +20,14 @@
               <p>Call Us</p>
               <p>
                 <FontAwesomeIcon :icon="['fa', 'phone']" />
-                <a href="tel:+19495989605" class="ms-1">949-598-9605</a>
+                <a :href="`tel:${$contactPhone}`" class="ms-1">{{ useFormatPhone($contactPhone) }}</a>
               </p>
             </div>
             <div class="px-5 mx-auto my-4 md:px-40">
               <p>Email Us</p>
               <p>
                 <FontAwesomeIcon :icon="['fa', 'envelope']" />
-                <a href="mailto:info@scadasolutions.com" class="ms-1">info@scadasolutions.com</a>
+                <a :href="`mailto:${$contactEmail}`" class="ms-1">{{ $contactEmail }}</a>
               </p>
             </div>
             <p class="px-5 mx-auto my-4 md:px-40">
