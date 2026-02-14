@@ -3,6 +3,7 @@ import { createPinia } from 'pinia';
 import './style.scss';
 import App from './App.vue';
 import router from './router';
+import { useFormatPhone } from './composables/utils';
 
 /* Font Awesome */
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -34,10 +35,16 @@ app.use(pinia);
 
 
 // Global Variables
-app.config.globalProperties.$companyName = 'SCADA Solutions, Inc.';
-app.config.globalProperties.$contactEmail = 'info@scadasolutions.com';
-app.config.globalProperties.$contactPhone = '+19495099605';
-app.config.globalProperties.$companyLicense = '777306';
+let siteProperties = {
+  companyName:    'SCADA Solutions, Inc.',
+  contactEmail:   'info@scadasolutions.com',
+  contactPhone:   '+19495099605',
+  companyAddress: '6789 Quail Hill Parkway, Suite #405, Irvine, CA 92603',
+  companyLicense: '777306',
+};
+siteProperties.contactPhoneFormatted = useFormatPhone(siteProperties.contactPhone);
+app.config.globalProperties.siteProperties = siteProperties;
+app.provide('siteProperties', siteProperties);
 
 // Global Components
 import ContentLeftSection from './components/ContentLeftSection.vue';

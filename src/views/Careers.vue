@@ -46,7 +46,7 @@ import ContentFullSection from '../components/ContentFullSection.vue';
       SSI offers competitive compensation packages for the right candidates and is an equal opportunity employer.
     </p>
     <p class="my-5">
-      All interested candidates can email their resume and cover letter to <a class="link" :href="`mailto:${$contactEmail}?subject=SCADA%20Engineer`">{{ $contactEmail }}</a>.
+      All interested candidates can email their resume and cover letter to <a class="link" :href="`mailto:${siteProperties.contactEmail}?subject=SCADA%20Engineer`">{{ siteProperties.contactEmail }}</a>.
     </p>
 
 
@@ -77,7 +77,7 @@ import ContentFullSection from '../components/ContentFullSection.vue';
       SSI offers competitive compensation packages for the right candidates and is an equal opportunity employer.
     </p>
     <p class="my-5">
-      All interested candidates can email their resume and cover letter to <a class="link" :href="`mailto:${$contactEmail}?subject=SCADA%20Programmer`">{{ $contactEmail }}</a>.
+      All interested candidates can email their resume and cover letter to <a class="link" :href="`mailto:${siteProperties.contactEmail}?subject=SCADA%20Programmer`">{{ siteProperties.contactEmail }}</a>.
     </p>
   </ContentLeftSection>
 

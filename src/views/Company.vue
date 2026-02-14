@@ -71,10 +71,10 @@ import Gallery from '../components/Gallery.vue';
       title="Privacy"
     >
       <p class="mx-auto my-10">
-        Copyright Information and Privacy Policy: This website and all its contents are copyright {{ $companyName }}. If you believe there are errors or wish to submit general inquiries about the site, please contact us.
+        Copyright Information and Privacy Policy: This website and all its contents are copyright {{ siteProperties.companyName }}. If you believe there are errors or wish to submit general inquiries about the site, please contact us.
       </p>
       <p class="mx-auto my-10">
-        {{ $companyName }} is not responsible for content on pages linked to outside our network. We take every precaution to protect your privacy. If you have concerns, questions, or comments about your privacy in your dealings with {{ $companyName }}, please contact us.
+        {{ siteProperties.companyName }} is not responsible for content on pages linked to outside our network. We take every precaution to protect your privacy. If you have concerns, questions, or comments about your privacy in your dealings with {{ siteProperties.companyName }}, please contact us.
       </p>
     </ContentRightSection>
 

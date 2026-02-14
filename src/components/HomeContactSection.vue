@@ -20,14 +20,14 @@
               <p>Call Us</p>
               <p>
                 <FontAwesomeIcon :icon="['fa', 'phone']" />
-                <a :href="`tel:${$contactPhone}`" class="ms-1">{{ useFormatPhone($contactPhone) }}</a>
+                <a :href="`tel:${siteProperties.contactPhone}`" class="ms-1">{{ siteProperties.contactPhoneFormatted }}</a>
               </p>
             </div>
             <div class="px-5 mx-auto my-4 md:px-40">
               <p>Email Us</p>
               <p>
                 <FontAwesomeIcon :icon="['fa', 'envelope']" />
-                <a :href="`mailto:${$contactEmail}`" class="ms-1">{{ $contactEmail }}</a>
+                <a :href="`mailto:${siteProperties.contactEmail}`" class="ms-1">{{ siteProperties.contactEmail }}</a>
               </p>
             </div>
             <p class="px-5 mx-auto my-4 md:px-40">
