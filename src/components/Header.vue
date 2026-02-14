@@ -31,7 +31,7 @@
           />
         </details>
         <router-link :to="{ name: 'home' }">
-          <img class="max-w-[275px] sm:max-w-[400px]" :src="useGetImageUrl('scada-solutions-logo.png')" alt="SCADA Solutions" />
+          <img class="max-w-[275px] sm:max-w-[400px]" :src="useGetImageUrl('scada-solutions-logo.png')" :alt="siteProperties.companyName" />
         </router-link>
       </div>
 

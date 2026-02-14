@@ -16,7 +16,7 @@
       <div class="flex flex-col items-center justify-between space-y-8 md:flex-row md:items-start md:space-y-0 md:space-x-8">
 
         <div class="w-full m-0 text-center md:w-1/3">
-            <img class="max-w-[300px] lg:max-w-[350px] mx-auto" :src="useGetImageUrl('scada-solutions-logo.png')" />
+            <img class="max-w-[300px] lg:max-w-[350px] mx-auto" :src="useGetImageUrl('scada-solutions-logo.png')" :alt="siteProperties.companyName" />
           <p class="my-10 text-xs copyright">&copy; {{ currentYear}} All Rights Reserved | {{ siteProperties.companyName }}</p>
         </div>
         <div class="w-full m-0 text-center md:w-1/3">
